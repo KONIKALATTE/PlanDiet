@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlanDiet.MainPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image Source="dietpic.png" HeightRequest="150" WidthRequest="150" VerticalOptions="Center"/>
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                <!-- WEEK -->
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        Grid.Row="0" 
+                        Grid.Column="0">
+
+                    <Label Text="Week"
+                           FontAttributes="Bold" 
+                           FontSize="15" 
+                           TextColor="LightCoral" 
+                           HorizontalTextAlignment="Center" 
+                           FontFamily="Lato"/>
+                </Border>
+
+                <Border  Grid.Row="0" 
+                         Grid.Column="1"
+                         Stroke="#FFE5EC">
+                    <Entry x:Name="Week"
+                           Grid.ColumnSpan="2" 
+                           PlaceholderColor="Coral"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"/>
+                </Border>
+
+
+
+                <!--BREAKFAST-->
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        Grid.Row="1" 
+                        Grid.Column="0">
+
+                    <Label Text="Breakfast"
+                           FontAttributes="Bold" 
+                           FontSize="15" 
+                           TextColor="LightCoral" 
+                           HorizontalTextAlignment="Center" 
+                           FontFamily="Lato"/>
+                </Border>
+
+                <Border Grid.Row="1" 
+                        Grid.Column="1"
+                        Stroke="#FFE5EC">
+                    <Entry 
+                   x:Name="Bfast"
+                   Grid.ColumnSpan="2" 
+                   PlaceholderColor="LightCoral"
+                   VerticalOptions="CenterAndExpand"  
+                   HorizontalTextAlignment="Center"/>
+                </Border>
+
+
+
+                <!--LUNCH-->
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        Grid.Row="3" 
+                        Grid.Column="0">
+
+                    <Label Text="Lunch"
+                           FontAttributes="Bold" 
+                           FontSize="15" 
+                           TextColor="LightCoral" 
+                           HorizontalTextAlignment="Center" 
+                           FontFamily="Lato"/>
+                </Border>
+                <Border Grid.Row="3" 
+                        Grid.Column="1"
+                        Stroke="#FFE5EC">
+                    <Entry 
+                   x:Name="Lunch"
+                   Grid.ColumnSpan="2"
+                   PlaceholderColor="Coral"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"/>
+                </Border>
+
+
+
+                <!--DINNER-->
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        Grid.Row="4" 
+                        Grid.Column="0"
+                        >
+
+                    <Label Text="Dinner"
+                           FontAttributes="Bold" 
+                           FontSize="15" 
+                           TextColor="LightCoral"
+                           FontFamily="Lato"/>
+                </Border>
+                <Border Grid.Row="4" 
+                        Grid.Column="1"
+                        Stroke="#FFE5EC">
+                    <Entry x:Name="Dinner"
+                       Grid.ColumnSpan="2"
+                       PlaceholderColor="LightCoral"
+                       VerticalOptions="CenterAndExpand"  
+                       HorizontalTextAlignment="Center"/>
+                </Border>
+
+
+
+                <!--WHAT'S ON YOUR MIND-->
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        Grid.Row="5" 
+                        Grid.Column="0">
+
+                    <Label Text="What's on your mind?"
+                           FontAttributes="Bold" 
+                           FontSize="15" 
+                           TextColor="LightCoral" 
+                           HorizontalTextAlignment="Center" 
+                           FontFamily="Lato"/>
+                </Border>
+                <Border Grid.Row="5" 
+                        Grid.Column="1"
+                        Stroke="#FFE5EC">
+                    <Entry Grid.Row="5" 
+                           Grid.Column="0" 
+                           x:Name="Planning"
+                           PlaceholderColor="LightCoral"
+                           VerticalOptions="CenterAndExpand"  
+                           HorizontalTextAlignment="Center"/>
+                </Border>
+
+
+
+
+
+                <!--BUTTONS-->
+                <Button Grid.Row="6" Grid.Column="1" 
+                    x:Name="btnRegister"
+                    Text="Register"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="btnRegister_Clicked"
+                    BackgroundColor="Olive"/>
+
+                <Button Grid.Row="6" 
+                    Grid.Column="0"
+                    Text="Cancel"
+                    TextColor="#FFE5EC" 
+                    HorizontalOptions="FillAndExpand" 
+                    x:Name="btncancel"
+                    BackgroundColor="Maroon"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

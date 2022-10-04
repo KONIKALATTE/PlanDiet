@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlanDiet.Page.NewPage1"
+             Title="NewPage1">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            Shell.NavBarIsVisible="False"
+            VerticalOptions="Center">
+            <Border Stroke="lightcoral"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 100,100,100,100"
+                Background="#FFE5EC"
+                Padding="10,5"
+                HorizontalOptions="Center">
+                <Image Source="dietpic.png" HeightRequest="150" WidthRequest="150" VerticalOptions="Center"/>
+            </Border>
+
+            <VerticalStackLayout Spacing="5">
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        StrokeShape="RoundRectangle 40,0,0,40"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center">
+                    <Label Text="WELCOME!!" 
+                       FontAttributes="Bold" 
+                       FontSize="28" 
+                       TextColor="LightCoral" 
+                       HorizontalTextAlignment="Center" 
+                       FontFamily="Lato"/>
+                </Border>
+                <Border Stroke="lightcoral"
+                        StrokeThickness="4"
+                        StrokeShape="RoundRectangle 40,0,0,40"
+                        Background="#FFE5EC"
+                        Padding="16,8"
+                        HorizontalOptions="Center">
+                    <Label Text="Start to create your diet plan" 
+                       FontSize="28" 
+                       TextColor="LightCoral" 
+                       HorizontalTextAlignment="Center" 
+                       FontFamily="Lato"/>
+                </Border>
+            </VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto">
+                <Button Grid.Column="0" 
+                        Text="Start your Plan"
+                        x:Name="BtnPlan"
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="LightCoral"
+                        TextColor="#FFE5EC"
+                        FontFamily="Lato"
+                        FontAttributes="Bold"/>
+                <Button Grid.Column="1"
+                        Text="Plan List"
+                        x:Name="BtnList"
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="LightCoral"
+                        TextColor="#FFE5EC"
+                        FontFamily="Lato"
+                        FontAttributes="Bold"/>
+
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
