@@ -16,8 +16,6 @@ namespace PlanDiet.Model
         public string Lunch { get; set; }
         public string Dinner { get; set; }
         public string Message { get; set; }
-        //asdasd
-
         public async Task<bool> DietPlan(string week, string bfast, string lunch, string dinner, string mssge)
         {
             try

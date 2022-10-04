@@ -10,7 +10,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-	public async void btnDone_clicked(object sender, EventArgs e)
+	public async void btndone_Clicked(object sender, EventArgs e)
 	{
         var result = await users.DietPlan(txtweek.Text, txtbfast.Text, txtlunch.Text, txtdinner.Text, txtmssge.Text);
         if (result == true)

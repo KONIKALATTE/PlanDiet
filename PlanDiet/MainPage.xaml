@@ -4,7 +4,7 @@
              x:Class="PlanDiet.MainPage">
 
     <ScrollView >
-        <Frame BackgroundColor="#FFE5EC" HeightRequest="450" HorizontalOptions="FillAndExpand" >
+        <Frame BackgroundColor="#FFE5EC" HeightRequest="450" HorizontalOptions="Center" >
             <VerticalStackLayout>
                 <Image Source="dietplanpic.png" HeightRequest="100" WidthRequest="110" VerticalOptions="Center"/>
                 <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
@@ -171,7 +171,7 @@
                     TextColor="White"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="DarkOliveGreen"
-                    Clicked="btnDone_Clicked"/>
+                    Clicked="btndone_Clicked"/>
 
                     <Button Grid.Row="6" 
                     Grid.Column="0"
