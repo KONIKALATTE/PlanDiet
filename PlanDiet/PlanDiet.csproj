@@ -49,7 +49,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Page\NewPage1.xaml">
+	  <None Remove="Resources\Images\dietplanpic.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FirebaseDatabase.net" Version="4.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Page\startup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

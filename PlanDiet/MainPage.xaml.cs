@@ -1,13 +1,29 @@
 ﻿namespace PlanDiet;
+using PlanDiet.Page;
+using PlanDiet.Model;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    Users users = new Users();
 
-	public MainPage()
+    public MainPage()
 	{
 		InitializeComponent();
 	}
+	public async void btnDone_clicked(object sender, EventArgs e)
+	{
+        var result = await users.DietPlan(txtweek.Text, txtbfast.Text, txtlunch.Text, txtdinner.Text, txtmssge.Text);
+        if (result == true)
+        {
+            await DisplayAlert("register", "successfully", "ok");
+        }
+        else
+        {
+            await DisplayAlert("Warning", "account exist", "ok");
+        }
+
+    }
+
 
 
 }
