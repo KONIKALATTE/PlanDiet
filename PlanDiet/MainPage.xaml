@@ -179,7 +179,7 @@
                     TextColor="#FFE5EC" 
                     HorizontalOptions="FillAndExpand" 
                     x:Name="btncancel"
-                    BackgroundColor="Maroon"/>
+                    BackgroundColor="Maroon" Clicked="btncancel_Clicked" />
 
                 </Grid>
             </VerticalStackLayout>

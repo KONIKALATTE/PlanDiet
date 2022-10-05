@@ -46,23 +46,41 @@
                        FontFamily="Lato"/>
                 </Border>
             </VerticalStackLayout>
-            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto">
-                <Button Grid.Column="0" 
+            
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto">
+                <Button Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Login"
+                        x:Name="BtnLogin"
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="LightCoral"
+                        TextColor="#FFE5EC"
+                        FontFamily="Lato"
+                        FontAttributes="Bold"
+                        Clicked="Btnlogin_Clicked"/>
+                
+                <Button Grid.Row="0" 
+                        Grid.Column="1"
                         Text="Start your Plan"
                         x:Name="BtnPlan"
                         HorizontalOptions="CenterAndExpand"
                         BackgroundColor="LightCoral"
                         TextColor="#FFE5EC"
                         FontFamily="Lato"
-                        FontAttributes="Bold"/>
-                <Button Grid.Column="1"
-                        Text="Plan List"
-                        x:Name="BtnList"
+                        FontAttributes="Bold"
+                        Clicked="Btnplan_Clicked"/>
+                
+                <Button Grid.Row="2"
+                        Grid.Column="1"
+                        Text="Register"
+                        x:Name="BtnRegister"
                         HorizontalOptions="CenterAndExpand"
                         BackgroundColor="LightCoral"
                         TextColor="#FFE5EC"
                         FontFamily="Lato"
-                        FontAttributes="Bold"/>
+                        FontAttributes="Bold"
+                        Clicked="Btnregister_Clicked"/>
+                
 
 
             </Grid>
