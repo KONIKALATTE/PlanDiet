@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.LoginPage"
-             Title="LoginPage">
+             Title="">
     <ScrollView>
         <AbsoluteLayout>
             <Grid VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -14,64 +14,71 @@
                 <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" Spacing="0" Margin="20">
                     <Image Source="logo" Margin="0,0,0,0" HeightRequest="80"/>
                     <StackLayout Margin="0,0,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
-                        <Label Text="Let's sign you in." FontSize="30" HorizontalOptions="StartAndExpand"
-                           TextColor="{StaticResource TextColorWhite}" FontAttributes="Bold" />
-                        <Label Text="Welcome back. You've been missed. Sign in to view your records." HorizontalOptions="StartAndExpand"
-                           FontSize="Small" TextColor="{StaticResource TextSoft}" />
+                        <Border Stroke="lightcoral"
+                                StrokeThickness="4"
+                                StrokeShape="RoundRectangle 40,0,0,40"
+                                Background="#FFE5EC"
+                                Padding="16,8"
+                                HorizontalOptions="Center">
+                            <Label Text="Login to your account." FontSize="30" HorizontalOptions="CenterAndExpand"
+                           TextColor="Maroon" FontAttributes="Bold" FontFamily="Lato" />
+                        </Border>
+                        <Label Text="Start planning on your diet routine lets start on your food." HorizontalOptions="StartAndExpand"
+                           FontSize="Small" TextColor="Maroon" />
+                        
                     </StackLayout>
                 </StackLayout>
-                <Frame Grid.Row="1" Margin="20" BackgroundColor="{StaticResource FrameColor_1}" CornerRadius="10">
-                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="20">
+                <Frame Grid.Row="1" Margin="20" BackgroundColor="LightCoral" CornerRadius="10">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="20" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Frame Grid.Row="0" Padding="0" BorderColor="{StaticResource FrameColor_1}"
+                        <Frame Grid.Row="0" Padding="0" BorderColor="#FFE5EC"
                                CornerRadius="10"
                                IsClippedToBounds="True">
-                            <Grid BackgroundColor="{StaticResource FrameColor_1}">
+                            <Grid BackgroundColor="#FFE5EC">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Image Grid.Column="0" Margin="5" Source="mail" />
                                 <Entry Grid.Column="1" x:Name="entryEmail"
-                                       BackgroundColor="{StaticResource FrameColor_1}"
+                                       BackgroundColor="#FFE5EC"
                                        Keyboard="Email"
-                                       Placeholder="Email" TextColor="{StaticResource TextColorWhite}"
-                                       PlaceholderColor="{StaticResource TextSoft}" />
+                                       Placeholder="Email" TextColor="#FFE5EC"
+                                       PlaceholderColor="Gray" />
                             </Grid>
                         </Frame>
-                        <Frame Grid.Row="1" Padding="0" BorderColor="{StaticResource FrameColor_1}"
+                        <Frame Grid.Row="1" Padding="0" BorderColor="#FFE5EC"
                                CornerRadius="10"
                                IsClippedToBounds="True">
-                            <Grid BackgroundColor="{StaticResource FrameColor_1}">
+                            <Grid BackgroundColor="#FFE5EC">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Image Grid.Column="0" Margin="5" Source="lock" />
                                 <Entry Grid.Column="1" x:Name="entryPassword"
-                                       BackgroundColor="{StaticResource FrameColor_1}"
+                                       BackgroundColor="#FFE5EC"
                                        IsPassword="True" Keyboard="Numeric"
-                                       Placeholder="Password" TextColor="{StaticResource TextColorWhite}"
-                                       PlaceholderColor="{StaticResource TextSoft}" />
+                                       Placeholder="Password" TextColor="#FFE5EC"
+                                       PlaceholderColor="Gray" />
                             </Grid>
                         </Frame>
                         <StackLayout Grid.Row="2" Orientation="Horizontal" Spacing="0">
-                            <CheckBox x:Name="checkremember" Color="{StaticResource ButtonColor}" />
-                            <Label Text="Remember me" TextColor="{StaticResource TextColorWhite}" FontSize="Medium"
+                            <CheckBox x:Name="checkremember" Color="Maroon" />
+                            <Label Text="Remember me" TextColor="Maroon" FontSize="Medium"
                                    VerticalOptions="CenterAndExpand" />
                         </StackLayout>
                         <StackLayout Grid.Row="3" Spacing="5" VerticalOptions="FillAndExpand" HeightRequest="40"
                                      HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                            <Button Text="Sign In" TextColor="{StaticResource TextColorBlack}" x:Name="btnsignin"
-                                    BackgroundColor="{StaticResource ButtonColor}"
+                            <Button Text="Sign In" TextColor="#FFE5EC" x:Name="btnsignin"
+                                    BackgroundColor="Maroon"
                                     CornerRadius="5" Padding="0" HorizontalOptions="FillAndExpand" TextTransform="None"/>
-                            <Button Text="Cancel" TextColor="{StaticResource TextColorBlack}" BackgroundColor="{StaticResource ButtonColor}"
-                            BorderColor="{StaticResource Primary}" BorderWidth="05" x:Name="btncancel"
+                            <Button Text="Cancel" TextColor="#FFE5EC" BackgroundColor="Maroon" x:Name="btncancel"
                             CornerRadius="5" Padding="0" HorizontalOptions="FillAndExpand" TextTransform="None"/>
                         </StackLayout>
                     </Grid>
@@ -87,8 +94,8 @@
                 x:Name="ai"
                 IsRunning="True" IsVisible="True"
                 HorizontalOptions="CenterAndExpand"
-                Color="{StaticResource ButtonColor}" Margin="0,300,0,0" />
-                <Label x:Name="lblorderstate" Text="We're processing your request, please wait..." Margin="0" HorizontalOptions="CenterAndExpand" TextColor="Gray"/>
+                BackgroundColor="Maroon" Margin="0,300,0,0" />
+                <Label x:Name="lblorderstate" Text="Loading..." Margin="0" HorizontalOptions="CenterAndExpand" TextColor="Gray"/>
             </StackLayout>
         </AbsoluteLayout>
     </ScrollView>
