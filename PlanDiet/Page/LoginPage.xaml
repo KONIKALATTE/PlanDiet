@@ -80,7 +80,7 @@
                             <Button Text="Sign In" 
                                     TextColor="#FFE5EC" 
                                     x:Name="btnsignin"
-                                    
+                                    Clicked="Btnsignin_Clicked"
                                     BackgroundColor="Maroon"
                                     CornerRadius="5" 
                                     Padding="0" 

@@ -3,10 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.RegisterPage"
              Title="">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Register!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            Shell.NavBarIsVisible="False"
+            VerticalOptions="Center">
+
+        <Image Source="summer.png" HeightRequest="150" WidthRequest="150"/>
+        <VerticalStackLayout Spacing="5">
+            <Label Text="WELCOME" FontAttributes="Bold" FontSize="28" TextColor="LightCoral" HorizontalTextAlignment="Center" />
+            <Label Text="Login to your account" FontSize="28" TextColor="LightCoral" HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
+            
+            <Entry Grid.Row="0" Grid.Column="0"
+                   x:Name="txtfname"
+                   Grid.ColumnSpan="2" 
+                   Placeholder="First Name" 
+                   PlaceholderColor="Coral"
+                   VerticalOptions="CenterAndExpand"  
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry Grid.Row="1" Grid.Column="0" 
+                   x:Name="txtlname"
+                   Grid.ColumnSpan="2" 
+                   Placeholder="Last Name" 
+                   PlaceholderColor="LightCoral"
+                   VerticalOptions="CenterAndExpand"  
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry Grid.Row="3" Grid.Column="0"
+                   x:Name="txtmail"
+                   Grid.ColumnSpan="2" Placeholder="E-mail" 
+                   PlaceholderColor="Coral"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry Grid.Row="4" Grid.Column="0" 
+                   x:Name="txtPass"
+                   Grid.ColumnSpan="2"
+                   Placeholder="Password" 
+                   PlaceholderColor="LightCoral"
+                   VerticalOptions="CenterAndExpand"  
+                   HorizontalTextAlignment="Center"/>
+
+            <Button Grid.Row="5" Grid.Column="1" 
+                    x:Name="btnRegister"
+                    Text="Register"                 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="btnRegister_Clicked"/>
+
+            <Button Grid.Row="5" 
+                    Grid.Column="0"
+                    Text="Cancel"
+                    TextColor="Red" 
+                    HorizontalOptions="FillAndExpand" 
+                    x:Name="btncancel"
+                    Clicked="btncancel_Clicked"/>
+
+        </Grid>
+
+
     </VerticalStackLayout>
 </ContentPage>

@@ -20,7 +20,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                var evaluateEmail = (await client
+                var evaluateEmail = (await food
                     .Child("Users")
                     .OnceAsync<Users>()).FirstOrDefault
                     (a => a.Object.Week == week);
@@ -35,10 +35,10 @@ namespace PlanDiet.Model
                         Dinner = dinner,
                         Message = mssge
                     };
-                    await client
+                    await food
                         .Child("Users")
                         .PostAsync(users);
-                    client.Dispose();
+                    food.Dispose();
                     return true;
 
                 }
