@@ -43,8 +43,9 @@
 
             <Entry Grid.Row="4" Grid.Column="0" 
                    x:Name="txtPass"
+                   IsPassword="True"
                    Grid.ColumnSpan="2"
-                   Placeholder="Password" 
+                   Placeholder="Password"
                    PlaceholderColor="LightCoral"
                    VerticalOptions="CenterAndExpand"  
                    HorizontalTextAlignment="Center"/>

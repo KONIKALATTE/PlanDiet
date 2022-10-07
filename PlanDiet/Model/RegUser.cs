@@ -67,9 +67,9 @@ namespace PlanDiet.Model
                 return false;
             }
         }
-        public ObservableCollection<Users> GetUserlist()
+        public ObservableCollection<RegUser> GetUserlist()
         {
-            var userlist = food.Child("Users")
+            var userlist = food.Child("RegUser")
                 .AsObservable<RegUser>()
                 .AsObservableCollection();
             return userlist;

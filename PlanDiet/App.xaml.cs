@@ -10,5 +10,6 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new NavigationPage(new Page.startup());
+
 	}
 }
