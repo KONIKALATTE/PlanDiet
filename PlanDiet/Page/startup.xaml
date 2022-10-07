@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.startup"
+             BackgroundColor="#aaf0d1"
              Title="">
    
     <ScrollView>
@@ -59,19 +60,10 @@
                         FontAttributes="Bold"
                         Clicked="Btnlogin_Clicked"/>
                 
-                <Button Grid.Row="0" 
-                        Grid.Column="1"
-                        Text="Start your Plan"
-                        x:Name="BtnPlan"
-                        HorizontalOptions="CenterAndExpand"
-                        BackgroundColor="LightCoral"
-                        TextColor="#FFE5EC"
-                        FontFamily="Lato"
-                        FontAttributes="Bold"
-                        Clicked="Btnplan_Clicked"/>
                 
-                <Button Grid.Row="2"
-                        Grid.Column="1"
+                
+                <Button Grid.Row="1"
+                        Grid.Column="0"
                         Text="Register"
                         x:Name="BtnRegister"
                         HorizontalOptions="CenterAndExpand"
