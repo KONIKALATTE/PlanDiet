@@ -56,7 +56,7 @@ namespace PlanDiet.Model
 
         }
         //EDIT or UPDATE
-        public async Task<bool> editdata(string week, string bfast, string lunch, string dinner, string mssge)
+        public async Task<bool> Editdata(string week, string bfast, string lunch, string dinner)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace PlanDiet.Model
                         Week = week,
                         Breakfast = bfast,
                         Lunch = lunch,
-                        Dinner = mssge
+                        Dinner = dinner
                     };
                     await food.Child("Users").Child(key).PatchAsync(user);
                     food.Dispose();
