@@ -16,15 +16,17 @@ namespace PlanDiet.Model
         public string Lunch { get; set; }
         public string Dinner { get; set; }
         public string Message { get; set; }
+
+        //ADD
         public async Task<bool> DietPlan(string week, string bfast, string lunch, string dinner, string mssge)
         {
             try
             {
-                var evaluateEmail = (await food
+                var evaluateweek = (await food
                     .Child("Users")
                     .OnceAsync<Users>()).FirstOrDefault
                     (a => a.Object.Week == week);
-                if (evaluateEmail == null)
+                if (evaluateweek == null)
                 {
                     var users = new Users()
                     {
@@ -51,7 +53,69 @@ namespace PlanDiet.Model
                 return false;
             }
 
+
         }
+        //EDIT or UPDATE
+        public async Task<bool> editdata(string week, string bfast, string lunch, string dinner, string mssge)
+        {
+            try
+            {
+                var evaluteuser = (await food
+                    .Child("Users")
+                    .OnceAsync<Users>())
+                    .FirstOrDefault
+                    (a => a.Object.Week == week);
+                if (evaluteuser != null)
+                {
+                    Users user = new Users
+                    {
+                        Week = week,
+                        Breakfast = bfast,
+                        Lunch = lunch,
+                        Dinner = mssge
+                    };
+                    await food.Child("Users").Child(key).PatchAsync(user);
+                    food.Dispose();
+                }
+                food.Dispose();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                food.Dispose();
+                return false;
+            }
+        }
+
+        //DELETE
+        public async Task<string> Deletedata()
+        {
+            try
+            {
+                await food
+                    .Child($"Users/{key}")
+                    .DeleteAsync();
+                return "removed";
+            }
+            catch (Exception ex)
+            {
+                return " error";
+            }
+        }
+
+
+
+
+        public ObservableCollection<Users> GetUserList()
+        {
+            var userlist = food
+                 .Child("Users")
+                .AsObservable<Users>()
+                .AsObservableCollection();
+            return userlist;
+
+        }
+
 
 
     }

@@ -180,7 +180,17 @@
                     TextColor="#FFE5EC" 
                     HorizontalOptions="FillAndExpand" 
                     x:Name="btncancel"
-                    BackgroundColor="Maroon" Clicked="btncancel_Clicked" />
+                    BackgroundColor="Maroon" 
+                    Clicked="btncancel_Clicked" />
+
+                    <Button Grid.Row="6" 
+                    Grid.Column="0"
+                    Text="View Diet Lists"
+                    TextColor="#FFE5EC" 
+                    HorizontalOptions="FillAndExpand" 
+                    x:Name="btndietlist"
+                    BackgroundColor="OliveDrab" 
+                    Clicked="btndietlist_Clicked" />
 
                 </Grid>
             </VerticalStackLayout>

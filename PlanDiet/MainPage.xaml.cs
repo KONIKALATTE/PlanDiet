@@ -27,6 +27,11 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+    
+    private async void btndietlist_Clicked(object sender, EventArgs e)
+    {
+
+    }
 
 }
 
