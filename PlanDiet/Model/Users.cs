@@ -116,6 +116,27 @@ namespace PlanDiet.Model
 
         }
 
+        public async Task<string> GetUserKey(string week)
+        {
+            try
+            {
+                var getuserkey = (await food.Child("Users").OnceAsync<Users>()).
+                    FirstOrDefault(a => a.Object.Week == week);
+                if (getuserkey == null) return null;
+
+                Breakfast = getuserkey.Object.Breakfast;
+                Lunch = getuserkey.Object.Lunch;
+                Dinner = getuserkey.Object.Dinner;
+
+                return getuserkey?.Key;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
 
 
     }

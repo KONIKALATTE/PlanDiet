@@ -4,33 +4,42 @@ namespace PlanDiet.Page;
 
 public partial class WeeklyDietList : ContentPage
 {
-    private Users user = new();
+    private Users userlist = new();
     public WeeklyDietList()
-
     {
         InitializeComponent();
-    }
-    protected override void OnAppearing()
-    {
-
-        base.OnAppearing();
-        entryweek.Text = week;
-        entrybfast.Text = Breakfast;
-        entrylunch.Text = Lunch;
-        entrydinner.Text = Dinner;
-
+        ListUsers.ItemsSource = userlist.GetUserList();
     }
 
-    private async void btnmodify_Clicked(object sender, EventArgs e)
+    private async void ListUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        if (!string.IsNullOrEmpty(entryweek.Text) || string.IsNullOrEmpty(entrybfast.Text) || string.IsNullOrEmpty(entrylunch.Text) || string.IsNullOrEmpty(entrydinner.Text))
+        App.week = (e.CurrentSelection.FirstOrDefault() as Users)?.Week;
+        App.key = await userlist.GetUserKey(App.week);
+        //await Navigation.PushAsync(new EditPage());
+
+    }
+
+    private async void edititem_Clicked(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(App.key))
         {
-            var a = await user.Editdata (entryweek.Text, entrybfast.Text, entrylunch.Text, entrydinner.Text);
-            if (!a)
-                await DisplayAlert("Modify", "Data Successfully Updated", "OK");
-            await Navigation.PopAsync();
-            return;
+            await Navigation.PushAsync(new WeeklyDietList());
         }
-        await DisplayAlert("Modify", "Data Not Successfully Updated", "OK");
+        else
+        {
+            await DisplayAlert("Data", "Please Select a Data to modify! ", "Got it!");
+        }
+    }
+
+    private async void BTN_delete_Clicked(object sender, EventArgs e)
+    {
+        var result = await DisplayAlert("Alert", "Are You Sure to Delete", "YES", "NO");
+        if (result)
+        {
+            await userlist.Deletedata();
+            return;
+
+        }
+        await DisplayAlert("Alert", "Deletion not Successfully", "YES");
     }
 }

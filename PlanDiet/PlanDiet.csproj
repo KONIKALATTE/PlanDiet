@@ -68,6 +68,9 @@
 	  <MauiXaml Update="Page\startup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Page\userlists.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Page\WeeklyDietList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
