@@ -166,31 +166,32 @@
 
 
                     <!--BUTTONS-->
-                    <Button Grid.Row="6" Grid.Column="1" 
+                    <Button Grid.Row="6" 
+                    Grid.Column="0" 
                     x:Name="btnDone"
                     Text="Done"
                     TextColor="White"
-                    HorizontalOptions="FillAndExpand"
+                    HorizontalOptions="Center"
                     BackgroundColor="DarkOliveGreen"
                     Clicked="btndone_Clicked"/>
 
                     <Button Grid.Row="6" 
-                    Grid.Column="0"
-                    Text="Cancel"
-                    TextColor="#FFE5EC" 
-                    HorizontalOptions="FillAndExpand" 
-                    x:Name="btncancel"
-                    BackgroundColor="Maroon" 
-                    Clicked="btncancel_Clicked" />
-
-                    <Button Grid.Row="6" 
-                    Grid.Column="0"
+                    Grid.Column="1"
                     Text="View Diet Lists"
                     TextColor="#FFE5EC" 
-                    HorizontalOptions="FillAndExpand" 
+                    HorizontalOptions="Center" 
                     x:Name="btndietlist"
                     BackgroundColor="OliveDrab" 
                     Clicked="btndietlist_Clicked" />
+
+                    <Button Grid.Row="6" 
+                    Grid.Column="2"
+                    Text="Cancel"
+                    TextColor="#FFE5EC" 
+                    HorizontalOptions="Center" 
+                    x:Name="btncancel"
+                    BackgroundColor="Maroon" 
+                    Clicked="btncancel_Clicked" />
 
                 </Grid>
             </VerticalStackLayout>

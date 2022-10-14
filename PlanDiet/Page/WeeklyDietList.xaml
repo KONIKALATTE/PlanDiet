@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.WeeklyDietList"
              Title="WeeklyDietList">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="" Text="Modify" x:Name="edititem"
+                     Order="Secondary"  Clicked="edititem_Clicked" />
+
+        <ToolbarItem IconImageSource="" Text="Delete" x:Name="BTN_delete"
+                     Order="Secondary"  Clicked="BTN_delete_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <AbsoluteLayout>
             <Grid RowDefinitions="Auto, *" Margin="10" ColumnSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,1"

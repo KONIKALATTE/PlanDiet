@@ -93,12 +93,12 @@ namespace PlanDiet.Model
             }
         } 
         //Update
-        public async Task<bool> editdata(string lname, string fname)
+        public async Task<bool> Editdata(string lname, string fname)
         {
             try
             {
                 var evaluteuser = (await food
-                    .Child("RegUsers")
+                    .Child("RegUser")
                     .OnceAsync<RegUser>())
                     .FirstOrDefault
                     (a => a.Object.Email == mail);
@@ -106,6 +106,7 @@ namespace PlanDiet.Model
                 {
                     RegUser user = new RegUser
                     {
+                        Email = Email,
                         FirstName = fname,
                         LastName = lname
                     };
