@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.WeeklyDietList"
-             Title="WeeklyDietList">
+             Title="WeeklyDietList"
+             BackgroundColor="#aaf0d1">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="" Text="Modify" x:Name="edititem"
                      Order="Secondary" Clicked="edititem_Clicked" />
@@ -13,16 +14,16 @@
 
 
     <Grid RowDefinitions="Auto,Auto,Auto,*">
-        <Frame HeightRequest="100" CornerRadius="50" BackgroundColor="{StaticResource FrameColor_1}"
+        <Frame HeightRequest="100" CornerRadius="5" BackgroundColor="LightCoral"
                Margin="0,0,0,0"/>
 
         <Label Grid.Row="0" 
                Text="Diet Plan Lists"
-               Margin="20" 
+               Margin="40" 
                FontSize="Large"
                FontAttributes="Bold"
                VerticalOptions="Center" 
-               TextColor="{StaticResource TextColorWhite}"/>
+               TextColor="White"/>
 
         <ImageButton Grid.Row="0"
                      HorizontalOptions="EndAndExpand" 
@@ -36,12 +37,12 @@
         <SearchBar Grid.Row="1" 
                    Margin="10" 
                    Placeholder="Find School" 
-                   BackgroundColor="{StaticResource FrameColor_1}" 
-                   PlaceholderColor="{StaticResource TextColorWhite}"/>
+                   BackgroundColor="White" 
+                   PlaceholderColor="Coral"/>
 
         <Label Grid.Row="2" 
-               BackgroundColor="{StaticResource Primary}" 
-               x:Name="loader" TextColor="{StaticResource TextSoft}"
+               BackgroundColor="LightCoral" 
+               x:Name="loader" TextColor="Gray"
                HorizontalOptions="CenterAndExpand"/>
 
         <CollectionView Grid.Row="3" x:Name="ListUsers" SelectionMode="Single" SelectionChanged="ListUsers_SelectionChanged">
@@ -80,20 +81,23 @@
             </SwipeItemView>
             </SwipeItems>-->
                         <!--</SwipeView.LeftItems>-->
-                        <Border 
-                    
-                   HeightRequest="130" 
-                   Padding="0" Margin="2"
-                   
-                   BackgroundColor="{StaticResource Primary}" 
-                   >
+                        <Frame HeightRequest="500" 
+                               WidthRequest="1000" 
+                               HorizontalOptions="Center"
+                               BackgroundColor="Maroon">
+                        <Border WidthRequest="1000"
+                                Stroke="lightcoral"
+                                StrokeThickness="4" 
+                                HeightRequest="130" 
+                                Padding="0" Margin="2"
+                                BackgroundColor="LightCoral">
 
                             <!--Must add expander so the client can view if the renter has an advance payment-->
 
                             <Grid ColumnDefinitions="Auto, *">
                                 <Line Grid.Column="0" 
                         WidthRequest="5" 
-                        BackgroundColor="{StaticResource ButtonColor}"/>
+                        BackgroundColor="LightCoral"/>
 
                                 <StackLayout Grid.Column="1" Margin="0" 
                                Orientation="Horizontal" 
@@ -105,7 +109,7 @@
                                         
                                         <Label VerticalOptions="CenterAndExpand" 
                                                  Text="Week:"                          
-                                                 TextColor="{StaticResource TextSoft}"                          
+                                                 TextColor="White"                          
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
                                                  HorizontalOptions="Start" 
@@ -115,11 +119,11 @@
                                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Week}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="White" />
 
                                         <Label VerticalOptions="CenterAndExpand" 
                                                  Text="Breakfast:"                          
-                                                 TextColor="{StaticResource TextSoft}"                          
+                                                 TextColor="White"                          
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
                                                  HorizontalOptions="Start" 
@@ -129,20 +133,20 @@
                                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding Breakfast}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="White" />
 
                                         <Label VerticalOptions="CenterAndExpand" Text="Lunch:"
-                                                   TextColor="{StaticResource TextSoft}"
+                                                   TextColor="White"
                                                    FontSize="Medium"
                                                    HorizontalOptions="Start" Grid.Row="2" Grid.Column="0" />
 
                                         <Label Grid.Row="2" Grid.Column="1" Text="{Binding Lunch}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="White" />
 
                                         <Label VerticalOptions="CenterAndExpand" Text="Dinner:"
-                                                   TextColor="{StaticResource TextSoft}"
+                                                   TextColor="White"
                                                    FontSize="Medium"
                                                    HorizontalOptions="Start" Grid.Row="3" Grid.Column="0" />
 
@@ -151,7 +155,7 @@
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" 
                                                    LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="White" />
 
 
 
@@ -159,6 +163,7 @@
                                 </StackLayout>
                             </Grid>
                         </Border>
+                        </Frame>
                         <!--</SwipeView>-->
                     </ContentView>
                 </DataTemplate>

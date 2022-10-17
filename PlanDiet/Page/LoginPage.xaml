@@ -93,7 +93,8 @@
                                     CornerRadius="5" 
                                     Padding="0" 
                                     HorizontalOptions="FillAndExpand" 
-                                    TextTransform="None"/>
+                                    TextTransform="None"
+                                    Clicked="Btncancel_Clicked"/>
                         </StackLayout>
                     </Grid>
                 </Frame>

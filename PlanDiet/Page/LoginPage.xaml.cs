@@ -26,11 +26,16 @@ public partial class LoginPage : ContentPage
         else if (a)
         {
             await DisplayAlert("Warning", "Login Successfully", "ok!");
-            Application.Current!.MainPage = new AppShell();
 
             return;
         }
         await DisplayAlert("Warning", "Please try again", "ok!");
+
+        Application.Current!.MainPage = new AppShell();
         progressLoading.IsVisible = false;
+    }
+    private async void Btncancel_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new startup());
     }
 }

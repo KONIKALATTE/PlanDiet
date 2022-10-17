@@ -5,7 +5,7 @@
              BackgroundColor="#aaf0d1">
 
     <ScrollView >
-        <Frame BackgroundColor="#FFE5EC" HeightRequest="450" HorizontalOptions="Center" >
+        <Frame BackgroundColor="#FFE5EC" HeightRequest="400" WidthRequest="600" HorizontalOptions="Center" >
             <VerticalStackLayout>
                 <Image Source="dietplanpic.png" HeightRequest="100" WidthRequest="110" VerticalOptions="Center"/>
                 <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
@@ -165,9 +165,21 @@
 
 
 
-                    <!--BUTTONS-->
-                    <Button Grid.Row="6" 
-                    Grid.Column="0" 
+                   
+
+                </Grid>
+                <Border Stroke="maroon"
+                            StrokeThickness="4"
+                            Background="#FFE5EC"
+                            Padding="16,8"
+                            HorizontalOptions="Center"
+                            Grid.Row="0" 
+                            Grid.Column="0">
+
+                <Grid ColumnDefinitions="*,*,*">
+                <!--BUTTONS-->
+                <Button Grid.Row="6" 
+                    Grid.Column="2" 
                     x:Name="btnDone"
                     Text="Done"
                     TextColor="White"
@@ -175,7 +187,7 @@
                     BackgroundColor="DarkOliveGreen"
                     Clicked="btndone_Clicked"/>
 
-                    <Button Grid.Row="6" 
+                <Button Grid.Row="6" 
                     Grid.Column="1"
                     Text="View Diet Lists"
                     TextColor="#FFE5EC" 
@@ -184,16 +196,16 @@
                     BackgroundColor="OliveDrab" 
                     Clicked="btndietlist_Clicked" />
 
-                    <Button Grid.Row="6" 
-                    Grid.Column="2"
+                <Button Grid.Row="6" 
+                    Grid.Column="0"
                     Text="Cancel"
                     TextColor="#FFE5EC" 
                     HorizontalOptions="Center" 
                     x:Name="btncancel"
                     BackgroundColor="Maroon" 
                     Clicked="btncancel_Clicked" />
-
                 </Grid>
+                </Border>
             </VerticalStackLayout>
         </Frame>
     </ScrollView>

@@ -25,7 +25,7 @@ public partial class MainPage : ContentPage
     }
     private async void btncancel_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PopAsync();
+        await Navigation.PushAsync(new LoginPage());
     }
     
     private async void btndietlist_Clicked(object sender, EventArgs e)
