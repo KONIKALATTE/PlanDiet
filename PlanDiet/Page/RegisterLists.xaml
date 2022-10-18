@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PlanDiet.Page.WeeklyDietList"
-             Title=""
-             BackgroundColor="#aaf0d1">
+             x:Class="PlanDiet.Page.RegisterLists"
+             Title="RegisterLists">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="" 
-                     Text="Modify" 
-                     x:Name="edititem"
-                     Order="Secondary"  
-                     Clicked="edititem_Clicked" />
+        <ToolbarItem IconImageSource="" Text="Modify" x:Name="edititem"
+                     Order="Secondary" />
 
-        <ToolbarItem IconImageSource="" 
-                     Text="Delete" 
-                     x:Name="BTN_delete"
-                     Order="Secondary"  
-                     Clicked="BTN_delete_Clicked" />
-
-        <ToolbarItem IconImageSource="" 
-                     Text="addworker"
-                     x:Name="addwork"
-                     Order="Secondary"/>
+        <ToolbarItem IconImageSource="" Text="Delete" x:Name="BTN_delete"
+                     Order="Secondary" />
     </ContentPage.ToolbarItems>
 
 
     <Grid RowDefinitions="Auto,Auto,Auto,*">
-        <Frame HeightRequest="200" CornerRadius="5" BackgroundColor="LightCoral"
+        <Frame HeightRequest="100" CornerRadius="5" BackgroundColor="LightCoral"
                Margin="0,0,0,0"/>
 
         <Label Grid.Row="0" 
@@ -56,7 +44,7 @@
                x:Name="loader" TextColor="Gray"
                HorizontalOptions="CenterAndExpand"/>
 
-        <CollectionView Grid.Row="3" x:Name="ListUsers" SelectionMode="Single" SelectionChanged="ListUsers_SelectionChanged">
+        <CollectionView Grid.Row="3" x:Name="ListUsers" SelectionMode="Single" ><!--SelectionChanged="ListUsers_SelectionChanged"-->
 
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="1" />
@@ -92,35 +80,34 @@
             </SwipeItemView>
             </SwipeItems>-->
                         <!--</SwipeView.LeftItems>-->
-                        <Frame HeightRequest="200" 
+                        <Frame HeightRequest="500" 
                                WidthRequest="1000" 
                                HorizontalOptions="Center"
                                BackgroundColor="Maroon">
                             <Border WidthRequest="1000"
                                 Stroke="lightcoral"
                                 StrokeThickness="4" 
-                                HeightRequest="600" 
+                                HeightRequest="130" 
                                 Padding="0" Margin="2"
                                 BackgroundColor="LightCoral">
 
                                 <!--Must add expander so the client can view if the renter has an advance payment-->
 
-                            <Grid ColumnDefinitions="Auto, *">
-                                <Line Grid.Column="0" 
+                                <Grid ColumnDefinitions="Auto, *">
+                                    <Line Grid.Column="0" 
                         WidthRequest="5" 
                         BackgroundColor="LightCoral"/>
 
-                                <StackLayout Grid.Column="1" Margin="0" 
+                                    <StackLayout Grid.Column="1" Margin="0" 
                                Orientation="Horizontal" 
                                HorizontalOptions="FillAndExpand"
                                BackgroundColor="Transparent">
 
-                                    <Grid RowSpacing="0" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+                                        <Grid RowSpacing="0" RowDefinitions="Auto, Auto, Auto,Auto"
                                               ColumnDefinitions="Auto, *">
-                                        
-                                        
+
                                             <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Day:"                          
+                                                 Text="FirstName:"                          
                                                  TextColor="White"                          
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
@@ -128,13 +115,13 @@
                                                  Grid.Row="0" 
                                                  Grid.Column="0" />
 
-                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Day}"
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
                                                    TextColor="White" />
 
                                             <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Week:"                          
+                                                 Text="Breakfast:"                          
                                                  TextColor="White"                          
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
@@ -142,42 +129,28 @@
                                                  Grid.Row="1" 
                                                  Grid.Column="0" />
 
-                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Week}"
+                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Breakfast}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
                                                    TextColor="White" />
 
-                                        <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Breakfast:"                          
-                                                 TextColor="White"                          
-                                                 FontSize="Medium" 
-                                                 LineBreakMode="TailTruncation"                         
-                                                 HorizontalOptions="Start" 
-                                                 Grid.Row="2" 
-                                                 Grid.Column="0" />
+                                            <Label VerticalOptions="CenterAndExpand" Text="Lunch:"
+                                                   TextColor="White"
+                                                   FontSize="Medium"
+                                                   HorizontalOptions="Start" Grid.Row="2" Grid.Column="0" />
 
-                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Breakfast}"
+                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Lunch}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
                                                    TextColor="White" />
 
-                                        <Label VerticalOptions="CenterAndExpand" Text="Lunch:"
+                                            <Label VerticalOptions="CenterAndExpand" Text="Dinner:"
                                                    TextColor="White"
                                                    FontSize="Medium"
                                                    HorizontalOptions="Start" Grid.Row="3" Grid.Column="0" />
 
-                                        <Label Grid.Row="3" Grid.Column="4" Text="{Binding Lunch}"
-                                                   FontSize="Medium"
-                                                   FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
 
-                                        <Label VerticalOptions="CenterAndExpand" Text="Dinner:"
-                                                   TextColor="White"
-                                                   FontSize="Medium"
-                                                   HorizontalOptions="Start" Grid.Row="4" Grid.Column="0" />
-
-                                        
-                                        <Label Grid.Row="4" Grid.Column="4" Text="{Binding Dinner}"
+                                            <Label Grid.Row="3" Grid.Column="4" Text="{Binding Dinner}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" 
                                                    LineBreakMode="TailTruncation"
@@ -185,10 +158,10 @@
 
 
 
-                                    </Grid>
-                                </StackLayout>
-                            </Grid>
-                        </Border>
+                                        </Grid>
+                                    </StackLayout>
+                                </Grid>
+                            </Border>
                         </Frame>
                         <!--</SwipeView>-->
                     </ContentView>

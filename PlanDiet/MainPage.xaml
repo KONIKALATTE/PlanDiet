@@ -5,18 +5,46 @@
              BackgroundColor="#aaf0d1">
 
     <ScrollView >
-        <Frame BackgroundColor="#FFE5EC" HeightRequest="400" WidthRequest="600" HorizontalOptions="Center" >
+        <Frame BackgroundColor="#FFE5EC" HeightRequest="1500" WidthRequest="600" HorizontalOptions="Center" >
             <VerticalStackLayout>
                 <Image Source="dietplanpic.png" HeightRequest="100" WidthRequest="110" VerticalOptions="Center"/>
-                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
-
-                    <!-- WEEK -->
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                     <!--DAY-->
                     <Border Stroke="lightcoral"
                             StrokeThickness="4"
                             Background="#FFE5EC"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="0" 
+                            Grid.Column="0">
+
+                        <Label Text="Day"
+                               FontAttributes="Bold" 
+                               FontSize="15" 
+                               TextColor="LightCoral" 
+                               HorizontalTextAlignment="Center" 
+                               FontFamily="Lato"/>
+                    </Border>
+
+                    <Border  Grid.Row="0" 
+                             Grid.Column="1"
+                             Stroke="lightcoral">
+                        <Entry x:Name="txtday"
+                               Grid.ColumnSpan="2" 
+                               PlaceholderColor="Coral"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalTextAlignment="Center"
+                               TextColor="Maroon"
+                               FontFamily="Lato"/>
+                    </Border>
+                    
+                    <!-- WEEK -->
+                    <Border Stroke="lightcoral"
+                            StrokeThickness="4"
+                            Background="#FFE5EC"
+                            Padding="16,8"
+                            HorizontalOptions="Center"
+                            Grid.Row="1" 
                             Grid.Column="0">
 
                         <Label Text="Week"
@@ -27,7 +55,7 @@
                                FontFamily="Lato"/>
                     </Border>
 
-                    <Border  Grid.Row="0" 
+                    <Border  Grid.Row="1" 
                              Grid.Column="1"
                              Stroke="lightcoral">
                         <Entry x:Name="txtweek"
@@ -47,7 +75,7 @@
                             Background="#FFE5EC"
                             Padding="16,8"
                             HorizontalOptions="Center"
-                            Grid.Row="1" 
+                            Grid.Row="2" 
                             Grid.Column="0">
 
                         <Label Text="Breakfast"
@@ -58,7 +86,7 @@
                                FontFamily="Lato"/>
                     </Border>
 
-                    <Border Grid.Row="1" 
+                    <Border Grid.Row="2" 
                             Grid.Column="1"
                             Stroke="lightcoral">
                         <Entry x:Name="txtbfast"

@@ -71,27 +71,31 @@ namespace PlanDiet.Model
                 return false;
             }
         }
-        // GETUSER or REtrieve
-        public async Task<string> Getuserlist(string mail)
-        {
-            try
-            {
-                var getuserlist = (await food
-                    .Child("RegUser")
-                    .OnceAsync<RegUser>()).
-                    FirstOrDefault(a => a.Object.Email == mail);
-                if (getuserlist == null) return null;
 
-                FirstName = getuserlist.Object.FirstName;
-                LastName = getuserlist.Object.LastName;
-                Password = getuserlist.Object.Password;
-                return getuserlist?.Key;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-        } 
+
+        // GETUSER or REtrieve
+        //public async Task<string> Getuserlist(string mail)
+        //{
+        //    try
+        //    {
+        //        var getuserlist = (await food
+        //            .Child("RegUser")
+        //            .OnceAsync<RegUser>()).
+        //            FirstOrDefault(a => a.Object.Email == mail);
+        //        if (getuserlist == null) return null;
+
+        //        FirstName = getuserlist.Object.FirstName;
+        //        LastName = getuserlist.Object.LastName;
+        //        Email = getuserlist.Object.Email;
+        //        return getuserlist?.Key;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return null;
+        //    }
+        //} 
+
+
         //Update
         public async Task<bool> Editdata(string lname, string fname)
         {
@@ -131,7 +135,7 @@ namespace PlanDiet.Model
                     .DeleteAsync();
                 return "removed";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return " error";
             }
@@ -147,6 +151,27 @@ namespace PlanDiet.Model
                 .AsObservable<RegUser>()
                 .AsObservableCollection();
             return userlist;
+
+        }
+
+        public async Task<string> GetUserKey(string week)
+        {
+            try
+            {
+                var getuserkey = (await food.Child("RegUser").OnceAsync<RegUser>()).
+                    FirstOrDefault(a => a.Object.Email == mail);
+                if (getuserkey == null) return null;
+
+                FirstName = getuserkey.Object.FirstName;
+                Lastname = getuserkey.Object.LastName;
+                Email = getuserkey.Object.Email;
+
+                return getuserkey?.Key;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
 
         }
 

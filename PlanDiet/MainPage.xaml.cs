@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
 	}
 	public async void btndone_Clicked(object sender, EventArgs e)
 	{
-        var result = await users.DietPlan(txtweek.Text, txtbfast.Text, txtlunch.Text, txtdinner.Text, txtmssge.Text);
+        var result = await users.DietPlan(txtday.Text, txtweek.Text, txtbfast.Text, txtlunch.Text, txtdinner.Text, txtmssge.Text);
         if (result == true)
         {
             await DisplayAlert("register", "successfully", "ok");
