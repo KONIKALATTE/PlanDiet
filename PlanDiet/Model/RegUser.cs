@@ -112,7 +112,8 @@ namespace PlanDiet.Model
                     {
                         Email = Email,
                         FirstName = fname,
-                        LastName = lname
+                        LastName = lname,
+                        Password = Password,
                     };
                     await food.Child("RegUser").Child(key).PatchAsync(user);
                     food.Dispose();
@@ -120,7 +121,7 @@ namespace PlanDiet.Model
                 food.Dispose();
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 food.Dispose();
                 return false;
@@ -162,13 +163,13 @@ namespace PlanDiet.Model
                     FirstOrDefault(a => a.Object.Email == mail);
                 if (getuserkey == null) return null;
 
-                FirstName = getuserkey.Object.FirstName;
+                Firstname = getuserkey.Object.FirstName;
                 Lastname = getuserkey.Object.LastName;
                 Email = getuserkey.Object.Email;
 
                 return getuserkey?.Key;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

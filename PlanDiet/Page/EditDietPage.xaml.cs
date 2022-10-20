@@ -13,12 +13,12 @@ public partial class EditDietPage : ContentPage
     {
 
         base.OnAppearing();
-        entryday.Text = day;
-        entryweek.Text = week;
-        entrybfast.Text = Breakfast;
-        entrylunch.Text = Lunch;
-        entrydinner.Text = Dinner;
-        entrymssg.Text = Message;
+        entryday.Text = day1;
+        entryweek.Text = week1;
+        entrybfast.Text = Breakfast1;
+        entrylunch.Text = Lunch1;
+        entrydinner.Text = Dinner1;
+        entrymssg.Text = Message1;
 
     }
 

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.startup"
              BackgroundColor="#aaf0d1"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              Title="">
    
     <ScrollView>
@@ -17,7 +18,11 @@
                 Background="#FFE5EC"
                 Padding="10,5"
                 HorizontalOptions="Center">
-                <Image Source="dietpic.png" HeightRequest="150" WidthRequest="150" VerticalOptions="Center"/>
+
+                <skia:SKLottieView Source="food1.json"
+                                   RepeatCount="-1"
+                                   HeightRequest="300"
+                                   WidthRequest="300"/>
             </Border>
 
             <VerticalStackLayout Spacing="5">

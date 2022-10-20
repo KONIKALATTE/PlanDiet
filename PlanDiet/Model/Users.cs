@@ -126,11 +126,11 @@ namespace PlanDiet.Model
                 var getuserkey = (await food.Child("Users").OnceAsync<Users>()).
                     FirstOrDefault(a => a.Object.Day == day);
                 if (getuserkey == null) return null;
-                Day = getuserkey.Object.Day;
-                Week = getuserkey.Object.Week;
-                Breakfast = getuserkey.Object.Breakfast;
-                Lunch = getuserkey.Object.Lunch;
-                Dinner = getuserkey.Object.Dinner;
+                day1 = getuserkey.Object.Day;
+                week1 = getuserkey.Object.Week;
+                Breakfast1 = getuserkey.Object.Breakfast;
+                Lunch1 = getuserkey.Object.Lunch;
+                Dinner1 = getuserkey.Object.Dinner;
 
                 return getuserkey?.Key;
             }

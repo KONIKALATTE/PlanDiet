@@ -8,14 +8,13 @@ public partial class RegisterLists : ContentPage
     public RegisterLists()
     {
         InitializeComponent();
-        RegUser.ItemsSource = reglist.GetUserList();
+        ListUsers.ItemsSource = reglist.GetUserList();
     }
 
     private async void ListUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         App.mail = (e.CurrentSelection.FirstOrDefault() as RegUser)?.Email;
         App.key = await reglist.GetUserKey(App.mail);
-        await Navigation.PushAsync(new EditPage());
 
     }
 
