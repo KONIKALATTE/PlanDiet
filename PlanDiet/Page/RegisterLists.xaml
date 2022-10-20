@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.RegisterLists"
-             Title="RegisterLists">
+             Title="RegisterLists"
+             BackgroundColor="{StaticResource Primary}">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="" 
                      Text="Modify" 
@@ -19,7 +20,7 @@
 
 
     <Grid RowDefinitions="Auto,Auto,Auto,*">
-        <Frame HeightRequest="100" CornerRadius="50" BackgroundColor="{StaticResource FrameColor_1}"
+        <Frame HeightRequest="100" CornerRadius="50" BackgroundColor="{StaticResource Tertiary}"
                Margin="0,0,0,0"/>
 
         <Label Grid.Row="0" 
@@ -42,12 +43,12 @@
         <SearchBar Grid.Row="1" 
                    Margin="10" 
                    Placeholder="Find School" 
-                   BackgroundColor="{StaticResource FrameColor_1}" 
+                   BackgroundColor="{StaticResource Tertiary}" 
                    PlaceholderColor="{StaticResource TextColorWhite}"/>
 
         <Label Grid.Row="2" 
-               BackgroundColor="{StaticResource Primary}" 
-               x:Name="loader" TextColor="{StaticResource TextSoft}"
+               BackgroundColor="{StaticResource Secondary}" 
+               x:Name="loader" TextColor="{StaticResource Tertiary}"
                HorizontalOptions="CenterAndExpand"/>
 
         <CollectionView Grid.Row="3" x:Name="ListUsers" SelectionMode="Single"
@@ -89,7 +90,7 @@
                    HeightRequest="95" 
                    Padding="0" Margin="2"
                    
-                   BackgroundColor="{StaticResource Primary}" 
+                   BackgroundColor="{StaticResource Tertiary}" 
                    >
 
                             <!--Must add expander so the client can view if the renter has an advance payment-->
@@ -97,7 +98,7 @@
                             <Grid ColumnDefinitions="Auto, *">
                                 <Line Grid.Column="0" 
                         WidthRequest="5" 
-                        BackgroundColor="{StaticResource ButtonColor}"/>
+                        BackgroundColor="{StaticResource Tertiary}"/>
 
                                 <StackLayout Grid.Column="1" Margin="0" 
                                Orientation="Horizontal" 
@@ -119,7 +120,7 @@
                                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="{StaticResource Primary}" />
 
                                         <Label VerticalOptions="CenterAndExpand" Text="Last Name:"
                                                    TextColor="{StaticResource TextSoft}"
@@ -129,7 +130,7 @@
                                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding LastName}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="{StaticResource Primary}" />
 
                                         <Label VerticalOptions="CenterAndExpand" Text="Email Address:"
                                                    TextColor="{StaticResource TextSoft}"
@@ -140,7 +141,7 @@
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" 
                                                    LineBreakMode="TailTruncation"
-                                                   TextColor="{StaticResource TextColorWhite}" />
+                                                   TextColor="{StaticResource Primary}" />
 
 
 

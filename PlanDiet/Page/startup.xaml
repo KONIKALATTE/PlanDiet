@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.startup"
-             BackgroundColor="#aaf0d1"
+             BackgroundColor="{StaticResource Primary}"
              xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              Title="">
    
@@ -12,42 +12,42 @@
             Padding="30,0"
             Shell.NavBarIsVisible="False"
             VerticalOptions="Center">
-            <Border Stroke="lightcoral"
+            <Border Stroke="{StaticResource Tertiary}"
                 StrokeThickness="3"
                 StrokeShape="RoundRectangle 100,100,100,100"
-                Background="#FFE5EC"
+                Background="{StaticResource Secondary}"
                 Padding="10,5"
                 HorizontalOptions="Center">
 
-                <skia:SKLottieView Source="food1.json"
+                <skia:SKLottieView Source="food2.json"
                                    RepeatCount="-1"
                                    HeightRequest="300"
                                    WidthRequest="300"/>
             </Border>
 
             <VerticalStackLayout Spacing="5">
-                <Border Stroke="lightcoral"
+                <Border Stroke="{StaticResource Tertiary}"
                         StrokeThickness="4"
                         StrokeShape="RoundRectangle 40,0,0,40"
-                        Background="#FFE5EC"
+                        Background="{StaticResource Secondary}"
                         Padding="16,8"
                         HorizontalOptions="Center">
                     <Label Text="WELCOME!!" 
                        FontAttributes="Bold" 
                        FontSize="28" 
-                       TextColor="LightCoral" 
+                       TextColor="{StaticResource White}" 
                        HorizontalTextAlignment="Center" 
                        FontFamily="Lato"/>
                 </Border>
-                <Border Stroke="lightcoral"
+                <Border Stroke="{StaticResource Tertiary}"
                         StrokeThickness="4"
                         StrokeShape="RoundRectangle 40,0,0,40"
-                        Background="#FFE5EC"
+                        Background="{StaticResource Secondary}"
                         Padding="16,8"
                         HorizontalOptions="Center">
                     <Label Text="Start to create your diet plan" 
                        FontSize="28" 
-                       TextColor="LightCoral" 
+                       TextColor="{StaticResource White}" 
                        HorizontalTextAlignment="Center" 
                        FontFamily="Lato"/>
                 </Border>
@@ -59,8 +59,8 @@
                         Text="Login"
                         x:Name="BtnLogin"
                         HorizontalOptions="CenterAndExpand"
-                        BackgroundColor="LightCoral"
-                        TextColor="#FFE5EC"
+                        BackgroundColor="{StaticResource White}"
+                        TextColor="{StaticResource Secondary}"
                         FontFamily="Lato"
                         FontAttributes="Bold"
                         Clicked="Btnlogin_Clicked"/>
@@ -72,8 +72,8 @@
                         Text="Register"
                         x:Name="BtnRegister"
                         HorizontalOptions="CenterAndExpand"
-                        BackgroundColor="LightCoral"
-                        TextColor="#FFE5EC"
+                        BackgroundColor="{StaticResource White}"
+                        TextColor="{StaticResource Secondary}"
                         FontFamily="Lato"
                         FontAttributes="Bold"
                         Clicked="Btnregister_Clicked"/>

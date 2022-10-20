@@ -2,17 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.MainPage"
-             BackgroundColor="#aaf0d1">
+             BackgroundColor="{StaticResource Primary}">
 
     <ScrollView >
-        <Frame BackgroundColor="#FFE5EC" HeightRequest="1500" WidthRequest="600" HorizontalOptions="Center" >
+        <Frame BackgroundColor="{StaticResource Secondary}" HeightRequest="1500" WidthRequest="600" HorizontalOptions="Center" >
             <VerticalStackLayout>
                 <Image Source="dietplanpic.png" HeightRequest="100" WidthRequest="110" VerticalOptions="Center"/>
                 <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
                      <!--DAY-->
-                    <Border Stroke="lightcoral"
+                    <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Tertiary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="0" 
@@ -21,27 +21,27 @@
                         <Label Text="Day"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="LightCoral" 
+                               TextColor="{StaticResource White}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
 
                     <Border  Grid.Row="0" 
                              Grid.Column="1"
-                             Stroke="lightcoral">
+                             Stroke="{StaticResource White}">
                         <Entry x:Name="txtday"
                                Grid.ColumnSpan="2" 
                                PlaceholderColor="Coral"
                                VerticalOptions="CenterAndExpand"
                                HorizontalTextAlignment="Center"
-                               TextColor="Maroon"
+                               TextColor="{StaticResource Primary}"
                                FontFamily="Lato"/>
                     </Border>
                     
                     <!-- WEEK -->
-                    <Border Stroke="lightcoral"
+                    <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Tertiary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="1" 
@@ -50,29 +50,29 @@
                         <Label Text="Week"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="LightCoral" 
+                               TextColor="{StaticResource White}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
 
                     <Border  Grid.Row="1" 
                              Grid.Column="1"
-                             Stroke="lightcoral">
+                             Stroke="{StaticResource White}">
                         <Entry x:Name="txtweek"
                                Grid.ColumnSpan="2" 
                                PlaceholderColor="Coral"
                                VerticalOptions="CenterAndExpand"
                                HorizontalTextAlignment="Center"
-                               TextColor="Maroon"
+                               TextColor="{StaticResource Primary}"
                                FontFamily="Lato"/>
                     </Border>
 
 
 
                     <!--BREAKFAST-->
-                    <Border Stroke="lightcoral"
+                    <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Tertiary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="2" 
@@ -81,29 +81,29 @@
                         <Label Text="Breakfast"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="LightCoral" 
+                               TextColor="{StaticResource White}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
 
                     <Border Grid.Row="2" 
                             Grid.Column="1"
-                            Stroke="lightcoral">
+                            Stroke="{StaticResource White}">
                         <Entry x:Name="txtbfast"
                                Grid.ColumnSpan="2" 
                                PlaceholderColor="LightCoral"
                                VerticalOptions="CenterAndExpand"  
                                HorizontalTextAlignment="Center"
-                               TextColor="Maroon"
+                               TextColor="{StaticResource Primary}"
                                FontFamily="Lato"/>
                     </Border>
 
 
 
                     <!--LUNCH-->
-                    <Border Stroke="lightcoral"
+                    <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Tertiary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="3" 
@@ -112,28 +112,28 @@
                         <Label Text="Lunch"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="LightCoral" 
+                               TextColor="{StaticResource White}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
                     <Border Grid.Row="3" 
                             Grid.Column="1"
-                            Stroke="lightcoral">
+                            Stroke="{StaticResource White}">
                         <Entry x:Name="txtlunch"
                                Grid.ColumnSpan="2"
                                PlaceholderColor="Coral"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalTextAlignment="Center"
-                               TextColor="Maroon"
+                               TextColor="{StaticResource Primary}"
                                FontFamily="Lato"/>   
                     </Border>
 
 
 
                     <!--DINNER-->
-                    <Border Stroke="lightcoral"
+                    <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Tertiary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="4" 
@@ -142,27 +142,27 @@
                         <Label Text="Dinner"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="LightCoral"
+                               TextColor="{StaticResource White}"
                                FontFamily="Lato"/>  
                     </Border>
                     <Border Grid.Row="4" 
                             Grid.Column="1"
-                            Stroke="lightcoral">
+                            Stroke="{StaticResource White}">
                         <Entry x:Name="txtdinner"
                                Grid.ColumnSpan="2"
                                PlaceholderColor="LightCoral"
                                VerticalOptions="CenterAndExpand"  
                                HorizontalTextAlignment="Center"
-                               TextColor="Maroon"
+                               TextColor="{StaticResource Primary}"
                                FontFamily="Lato"/>   
                     </Border>
 
 
 
                     <!--WHAT'S ON YOUR MIND-->
-                    <Border Stroke="lightcoral"
+                    <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Tertiary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="5" 
@@ -172,20 +172,20 @@
                                x:Name="txtmssge"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="LightCoral" 
+                               TextColor="{StaticResource White}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
                     <Border Grid.Row="5" 
                             Grid.Column="1"
-                            Stroke="lightcoral">
+                            Stroke="{StaticResource White}">
                         <Entry Grid.Row="5" 
                                Grid.Column="0" 
                                x:Name="message"
                                PlaceholderColor="LightCoral"
                                VerticalOptions="CenterAndExpand"  
                                HorizontalTextAlignment="Center"
-                               TextColor="Maroon"
+                               TextColor="{StaticResource Primary}"
                                FontFamily="Lato"/>
                     </Border>
 

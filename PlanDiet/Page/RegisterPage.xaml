@@ -2,27 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.RegisterPage"
+             BackgroundColor="{StaticResource Primary}"
              Title="">
-    
+
     <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             Shell.NavBarIsVisible="False"
             VerticalOptions="Center">
-
-        <Image Source="summer.png" HeightRequest="150" WidthRequest="150"/>
         <VerticalStackLayout Spacing="5">
             <Label Text="WELCOME" FontAttributes="Bold" FontSize="28" TextColor="LightCoral" HorizontalTextAlignment="Center" />
             <Label Text="Login to your account" FontSize="28" TextColor="LightCoral" HorizontalTextAlignment="Center" />
         </VerticalStackLayout>
-
-        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
+        <Border BackgroundColor="{StaticResource White}">
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
             
             <Entry Grid.Row="0" Grid.Column="0"
                    x:Name="txtfname"
                    Grid.ColumnSpan="2" 
                    Placeholder="First Name" 
-                   PlaceholderColor="Coral"
+                   PlaceholderColor="{StaticResource Secondary}"
                    VerticalOptions="CenterAndExpand"  
                    HorizontalTextAlignment="Center"/>
 
@@ -30,14 +29,14 @@
                    x:Name="txtlname"
                    Grid.ColumnSpan="2" 
                    Placeholder="Last Name" 
-                   PlaceholderColor="LightCoral"
+                   PlaceholderColor="{StaticResource Secondary}"
                    VerticalOptions="CenterAndExpand"  
                    HorizontalTextAlignment="Center"/>
 
             <Entry Grid.Row="3" Grid.Column="0"
                    x:Name="txtmail"
                    Grid.ColumnSpan="2" Placeholder="E-mail" 
-                   PlaceholderColor="Coral"
+                   PlaceholderColor="{StaticResource Secondary}"
                    VerticalOptions="CenterAndExpand" 
                    HorizontalTextAlignment="Center"/>
 
@@ -46,32 +45,43 @@
                    IsPassword="True"
                    Grid.ColumnSpan="2"
                    Placeholder="Password"
-                   PlaceholderColor="LightCoral"
+                   PlaceholderColor="{StaticResource Secondary}"
                    VerticalOptions="CenterAndExpand"  
                    HorizontalTextAlignment="Center"/>
+            
 
+        </Grid>
+        </Border>
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto, Auto, Auto">
             <Button Grid.Row="5" Grid.Column="1" 
                     x:Name="btnRegister"
-                    Text="Register"                 
+                    Text="Register"          
+                    TextColor="{StaticResource White}"
                     HorizontalOptions="FillAndExpand" 
-                    Clicked="btnRegister_Clicked"/>
+                    Clicked="btnRegister_Clicked"
+                    BackgroundColor="{StaticResource Tertiary}"
+                    FontAttributes="Bold"/>
 
             <Button Grid.Row="5" Grid.Column="2" 
                     x:Name="btnlist"
-                    Text="Users"                 
+                    Text="Users"        
+                    TextColor="{StaticResource White}"
                     HorizontalOptions="FillAndExpand" 
-                    Clicked="btnuserlist_Clicked"/>
+                    Clicked="btnuserlist_Clicked"
+                    BackgroundColor="{StaticResource Tertiary}"
+                    FontAttributes="Bold"/>
 
             <Button Grid.Row="5" 
                     Grid.Column="0"
                     Text="Cancel"
-                    TextColor="Red" 
+                    TextColor="Maroon" 
                     HorizontalOptions="FillAndExpand" 
                     x:Name="btncancel"
-                    Clicked="btncancel_Clicked"/>
-
+                    Clicked="btncancel_Clicked"
+                    BackgroundColor="{StaticResource Tertiary}"
+                    FontAttributes="Bold"/>
         </Grid>
-
+            
 
     </VerticalStackLayout>
 </ContentPage>
