@@ -2,49 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.EditDietPage"
-             Title="EditDietPage">
+             Title=""
+             BackgroundColor="#377D71">
     
     <AbsoluteLayout>
         <Grid RowDefinitions="Auto, *" Margin="10" ColumnSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,1"
               AbsoluteLayout.LayoutFlags="All">
-            <Label Grid.Row="0" Text="School Modification" Margin="10,0"
+            <Label Grid.Row="0" Text="Modify your plan" Margin="10,0"
                 VerticalOptions="Center" FontSize="30" FontAttributes="Bold"
-                HorizontalOptions="Start" TextColor="{StaticResource TextColorWhite}"/>
-            <Frame CornerRadius="10" Grid.Row="1" VerticalOptions="CenterAndExpand" BackgroundColor="{StaticResource FrameColor_1}">
+                HorizontalOptions="Start" TextColor="#FBC5C5"/>
+            <Frame CornerRadius="10" Grid.Row="1" VerticalOptions="CenterAndExpand" BackgroundColor="#FBC5C5">
                 <Grid Margin="10" RowDefinitions="Auto,Auto">
                     <Grid Grid.Row="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
 
-                        <Entry Grid.Row="0" Placeholder="Day" BackgroundColor="{StaticResource FrameColor_1}" 
+                        <Entry Grid.Row="0" Placeholder="Day" BackgroundColor="#8879B0" 
                                x:Name="entryday" 
-                               PlaceholderColor="{StaticResource TextSoft}" TextColor="{StaticResource TextColorWhite}"/>
+                               PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="1" Placeholder="Week" BackgroundColor="{StaticResource FrameColor_1}" 
+                        <Entry Grid.Row="1" Placeholder="Week" BackgroundColor="#8879B0" 
                                x:Name="entryweek" 
-                               PlaceholderColor="{StaticResource TextSoft}" TextColor="{StaticResource TextColorWhite}"/>
+                               PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="2" Placeholder="Breakfast" BackgroundColor="{StaticResource FrameColor_1}"
+                        <Entry Grid.Row="2" Placeholder="Breakfast" BackgroundColor="#8879B0"
                                x:Name="entrybfast"
-                               PlaceholderColor="{StaticResource TextSoft}" TextColor="{StaticResource TextColorWhite}"/>
+                               PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="3" Placeholder="Lunch" BackgroundColor="{StaticResource FrameColor_1}"
+                        <Entry Grid.Row="3" Placeholder="Lunch" BackgroundColor="#8879B0"
                                x:Name="entrylunch"
-                               PlaceholderColor="{StaticResource TextSoft}" TextColor="{StaticResource TextColorWhite}"/>
+                               PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="4" Placeholder="Dinner" BackgroundColor="{StaticResource FrameColor_1}"
+                        <Entry Grid.Row="4" Placeholder="Dinner" BackgroundColor="#8879B0"
                                x:Name="entrydinner"
-                               PlaceholderColor="{StaticResource TextSoft}" TextColor="{StaticResource TextColorWhite}"/>
+                               PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="5" Placeholder="Message" BackgroundColor="{StaticResource FrameColor_1}"
+                        <Entry Grid.Row="5" Placeholder="Message" BackgroundColor="#8879B0"
                                x:Name="entrymssg"
-                               PlaceholderColor="{StaticResource TextSoft}" TextColor="{StaticResource TextColorWhite}"/>
+                               PlaceholderColor="White" TextColor="White"/>
 
 
 
                     </Grid>
-                    <Button Grid.Row="1" BackgroundColor="{StaticResource ButtonColor}"
+                    <Button Grid.Row="1" BackgroundColor="#FBA1A1"
                             Text="Modify" TextTransform="None" TextColor="{StaticResource TextColorBlack}"
                             x:Name="btnmodify" CornerRadius="8"
-                                />
+                                Clicked="btnmodify_Clicked"/>
                 </Grid>
             </Frame>
         </Grid>

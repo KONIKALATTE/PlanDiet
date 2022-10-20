@@ -30,4 +30,8 @@ public partial class RegisterPage : ContentPage
         await Navigation.PopAsync();
 
     }
+    private async void btnuserlist_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RegisterLists());
+    }
 }

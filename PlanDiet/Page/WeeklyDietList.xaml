@@ -9,7 +9,7 @@
                      Text="Modify" 
                      x:Name="edititem"
                      Order="Secondary"  
-                     Clicked="edititem_Clicked" />
+                     Clicked ="edititem_Clicked" />
 
         <ToolbarItem IconImageSource="" 
                      Text="Delete" 
@@ -17,10 +17,6 @@
                      Order="Secondary"  
                      Clicked="BTN_delete_Clicked" />
 
-        <ToolbarItem IconImageSource="" 
-                     Text="addworker"
-                     x:Name="addwork"
-                     Order="Secondary"/>
     </ContentPage.ToolbarItems>
 
 

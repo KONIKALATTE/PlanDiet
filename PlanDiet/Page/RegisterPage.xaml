@@ -16,7 +16,7 @@
             <Label Text="Login to your account" FontSize="28" TextColor="LightCoral" HorizontalTextAlignment="Center" />
         </VerticalStackLayout>
 
-        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
             
             <Entry Grid.Row="0" Grid.Column="0"
                    x:Name="txtfname"
@@ -55,6 +55,12 @@
                     Text="Register"                 
                     HorizontalOptions="FillAndExpand" 
                     Clicked="btnRegister_Clicked"/>
+
+            <Button Grid.Row="5" Grid.Column="2" 
+                    x:Name="btnlist"
+                    Text="Users"                 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="btnuserlist_Clicked"/>
 
             <Button Grid.Row="5" 
                     Grid.Column="0"

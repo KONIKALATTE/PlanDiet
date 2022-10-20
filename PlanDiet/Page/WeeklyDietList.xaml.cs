@@ -24,7 +24,7 @@ public partial class WeeklyDietList : ContentPage
     {
         if (!string.IsNullOrEmpty(App.key))
         {
-            await Navigation.PushAsync(new WeeklyDietList());
+            await Navigation.PushAsync(new EditDietPage());
         }
         else
         {

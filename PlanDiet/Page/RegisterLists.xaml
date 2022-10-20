@@ -4,25 +4,31 @@
              x:Class="PlanDiet.Page.RegisterLists"
              Title="RegisterLists">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="" Text="Modify" x:Name="edititem"
-                     Order="Secondary" />
+        <ToolbarItem IconImageSource="" 
+                     Text="Modify" 
+                     x:Name="edititem"
+                     Order="Secondary"  
+                     Clicked="edititem_Clicked" />
 
-        <ToolbarItem IconImageSource="" Text="Delete" x:Name="BTN_delete"
-                     Order="Secondary" />
+        <ToolbarItem IconImageSource="" 
+                     Text="Delete" 
+                     x:Name="BTN_delete"
+                     Order="Secondary"  
+                     Clicked="BTN_delete_Clicked" />
     </ContentPage.ToolbarItems>
 
 
     <Grid RowDefinitions="Auto,Auto,Auto,*">
-        <Frame HeightRequest="100" CornerRadius="5" BackgroundColor="LightCoral"
+        <Frame HeightRequest="100" CornerRadius="50" BackgroundColor="{StaticResource FrameColor_1}"
                Margin="0,0,0,0"/>
 
         <Label Grid.Row="0" 
-               Text="Diet Plan Lists"
-               Margin="40" 
+               Text="Register"
+               Margin="20" 
                FontSize="Large"
                FontAttributes="Bold"
                VerticalOptions="Center" 
-               TextColor="White"/>
+               TextColor="{StaticResource TextColorWhite}"/>
 
         <ImageButton Grid.Row="0"
                      HorizontalOptions="EndAndExpand" 
@@ -36,15 +42,16 @@
         <SearchBar Grid.Row="1" 
                    Margin="10" 
                    Placeholder="Find School" 
-                   BackgroundColor="White" 
-                   PlaceholderColor="Coral"/>
+                   BackgroundColor="{StaticResource FrameColor_1}" 
+                   PlaceholderColor="{StaticResource TextColorWhite}"/>
 
         <Label Grid.Row="2" 
-               BackgroundColor="LightCoral" 
-               x:Name="loader" TextColor="Gray"
+               BackgroundColor="{StaticResource Primary}" 
+               x:Name="loader" TextColor="{StaticResource TextSoft}"
                HorizontalOptions="CenterAndExpand"/>
 
-        <CollectionView Grid.Row="3" x:Name="ListUsers" SelectionMode="Single" ><!--SelectionChanged="ListUsers_SelectionChanged"-->
+        <CollectionView Grid.Row="3" x:Name="ListUsers" SelectionMode="Single"
+                        SelectionChanged="ListUsers_SelectionChanged">
 
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="1" />
@@ -62,14 +69,11 @@
             <SwipeItemView BackgroundColor="Transparent" 
                            Margin="5" 
                            x:Name="itemOnEdit">
-
             <StackLayout Margin="5">
             <StackLayout Orientation="Vertical"
                          VerticalOptions="CenterAndExpand"
                          HorizontalOptions="CenterAndExpand">
-
             <Image Source="edit" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" />
-
             <Label Text="Edit" HorizontalOptions="CenterAndExpand"
                    VerticalOptions="CenterAndExpand"
                    TextColor="{StaticResource TextColorWhite}" 
@@ -80,89 +84,70 @@
             </SwipeItemView>
             </SwipeItems>-->
                         <!--</SwipeView.LeftItems>-->
-                        <Frame HeightRequest="500" 
-                               WidthRequest="1000" 
-                               HorizontalOptions="Center"
-                               BackgroundColor="Maroon">
-                            <Border WidthRequest="1000"
-                                Stroke="lightcoral"
-                                StrokeThickness="4" 
-                                HeightRequest="130" 
-                                Padding="0" Margin="2"
-                                BackgroundColor="LightCoral">
+                        <Border 
+                    
+                   HeightRequest="95" 
+                   Padding="0" Margin="2"
+                   
+                   BackgroundColor="{StaticResource Primary}" 
+                   >
 
-                                <!--Must add expander so the client can view if the renter has an advance payment-->
+                            <!--Must add expander so the client can view if the renter has an advance payment-->
 
-                                <Grid ColumnDefinitions="Auto, *">
-                                    <Line Grid.Column="0" 
+                            <Grid ColumnDefinitions="Auto, *">
+                                <Line Grid.Column="0" 
                         WidthRequest="5" 
-                        BackgroundColor="LightCoral"/>
+                        BackgroundColor="{StaticResource ButtonColor}"/>
 
-                                    <StackLayout Grid.Column="1" Margin="0" 
+                                <StackLayout Grid.Column="1" Margin="0" 
                                Orientation="Horizontal" 
                                HorizontalOptions="FillAndExpand"
                                BackgroundColor="Transparent">
 
-                                        <Grid RowSpacing="0" RowDefinitions="Auto, Auto, Auto,Auto"
+                                    <Grid RowSpacing="0" RowDefinitions="Auto, Auto, Auto"
                                               ColumnDefinitions="Auto, *">
 
-                                            <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="FirstName:"                          
-                                                 TextColor="White"                          
-                                                 FontSize="Medium" 
-                                                 LineBreakMode="TailTruncation"                         
-                                                 HorizontalOptions="Start" 
-                                                 Grid.Row="0" 
-                                                 Grid.Column="0" />
+                                        <Label VerticalOptions="CenterAndExpand" 
+                         Text="First Name:"                          
+                         TextColor="{StaticResource TextSoft}"                          
+                         FontSize="Medium" 
+                         LineBreakMode="TailTruncation"                         
+                         HorizontalOptions="Start" 
+                         Grid.Row="0" 
+                         Grid.Column="0" />
 
-                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}"
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding FirstName}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource TextColorWhite}" />
 
-                                            <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Breakfast:"                          
-                                                 TextColor="White"                          
-                                                 FontSize="Medium" 
-                                                 LineBreakMode="TailTruncation"                         
-                                                 HorizontalOptions="Start" 
-                                                 Grid.Row="1" 
-                                                 Grid.Column="0" />
+                                        <Label VerticalOptions="CenterAndExpand" Text="Last Name:"
+                                                   TextColor="{StaticResource TextSoft}"
+                                                   FontSize="Medium"
+                                                   HorizontalOptions="Start" Grid.Row="1" Grid.Column="0" />
 
-                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Breakfast}"
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding LastName}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource TextColorWhite}" />
 
-                                            <Label VerticalOptions="CenterAndExpand" Text="Lunch:"
-                                                   TextColor="White"
+                                        <Label VerticalOptions="CenterAndExpand" Text="Email Address:"
+                                                   TextColor="{StaticResource TextSoft}"
                                                    FontSize="Medium"
                                                    HorizontalOptions="Start" Grid.Row="2" Grid.Column="0" />
 
-                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Lunch}"
-                                                   FontSize="Medium"
-                                                   FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
-
-                                            <Label VerticalOptions="CenterAndExpand" Text="Dinner:"
-                                                   TextColor="White"
-                                                   FontSize="Medium"
-                                                   HorizontalOptions="Start" Grid.Row="3" Grid.Column="0" />
-
-
-                                            <Label Grid.Row="3" Grid.Column="4" Text="{Binding Dinner}"
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Email}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" 
                                                    LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource TextColorWhite}" />
 
 
 
-                                        </Grid>
-                                    </StackLayout>
-                                </Grid>
-                            </Border>
-                        </Frame>
+                                    </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </Border>
                         <!--</SwipeView>-->
                     </ContentView>
                 </DataTemplate>
