@@ -21,7 +21,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                var evaluateEmail = (await food
+                var evaluateEmail = (await prod
                     .Child("RegUser")
                     .OnceAsync<RegUser>()).FirstOrDefault
                     (a => a.Object.Email == mail);
@@ -35,10 +35,10 @@ namespace PlanDiet.Model
                         Email = mail,
                         Password = Pass
                     };
-                    await food
+                    await prod
                         .Child("RegUser")
                         .PostAsync(user);
-                    food.Dispose();
+                   prod.Dispose();
                     return true;
 
                 }
@@ -59,7 +59,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                var evaluateEmail = (await food
+                var evaluateEmail = (await prod
                     .Child("RegUser")
                     .OnceAsync<RegUser>())
                     .FirstOrDefault
@@ -101,7 +101,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                var evaluteuser = (await food
+                var evaluteuser = (await prod
                     .Child("RegUser")
                     .OnceAsync<RegUser>())
                     .FirstOrDefault
@@ -115,15 +115,15 @@ namespace PlanDiet.Model
                         LastName = lname,
                         Password = Password,
                     };
-                    await food.Child("RegUser").Child(key).PatchAsync(user);
-                    food.Dispose();
+                    await prod.Child("RegUser").Child(key).PatchAsync(user);
+                    prod.Dispose();
                 }
-                food.Dispose();
+                prod.Dispose();
                 return false;
             }
             catch (Exception)
             {
-                food.Dispose();
+                prod.Dispose();
                 return false;
             }
         }
@@ -131,7 +131,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                await food
+                await prod
                     .Child($"RegUser/{key}")
                     .DeleteAsync();
                 return "removed";
@@ -147,7 +147,7 @@ namespace PlanDiet.Model
 
         public ObservableCollection<RegUser> GetUserList()
         {
-            var userlist = food
+            var userlist = prod
                  .Child("RegUser")
                 .AsObservable<RegUser>()
                 .AsObservableCollection();
@@ -159,7 +159,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                var getuserkey = (await food.Child("RegUser").OnceAsync<RegUser>()).
+                var getuserkey = (await prod.Child("RegUser").OnceAsync<RegUser>()).
                     FirstOrDefault(a => a.Object.Email == mail);
                 if (getuserkey == null) return null;
 

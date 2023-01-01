@@ -11,37 +11,37 @@ namespace PlanDiet.Model
 {
     public class Users
     {
-        public string Day { get; set; }
-        public string Week { get; set; }
-        public string Breakfast { get; set; }
-        public string Lunch { get; set; }
-        public string Dinner { get; set; }
+        public string ProductID { get; set; }
+        public string Medicine { get; set; }
+        public string BabyProduct { get; set; }
+        public string SchoolSupply { get; set; }
+        public string Grocery { get; set; }
         public string Message { get; set; }
 
         //ADD
-        public async Task<bool> DietPlan(string day, string week, string bfast, string lunch, string dinner, string mssg)
+        public async Task<bool> DietPlan(string prodid, string med, string bbyprod, string school, string grocery, string mssg)
         {
             try
             {
-                var evaluateweek = (await food
+                var evaluateweek = (await prod
                     .Child("Users")
                     .OnceAsync<Users>()).FirstOrDefault
-                    (a => a.Object.Day == day);
+                    (a => a.Object.ProductID == prodid);
                 if (evaluateweek == null)
                 {
                     var users = new Users()
                     {
-                        Day = day,
-                        Week = week,
-                        Breakfast = bfast,
-                        Lunch = lunch,
-                        Dinner = dinner,
+                        ProductID = prodid,
+                        Medicine = med,
+                        BabyProduct = bbyprod,
+                        SchoolSupply = school,
+                        Grocery = grocery,
                         Message = mssg
                     };
-                    await food
+                    await prod
                         .Child("Users")
                         .PostAsync(users);
-                    food.Dispose();
+                    prod.Dispose();
                     return true;
 
                 }
@@ -57,35 +57,35 @@ namespace PlanDiet.Model
 
         }
         //EDIT or UPDATE
-        public async Task<bool> Editdata(string day, string week, string bfast, string lunch, string dinner, string mssg)
+        public async Task<bool> Editdata(string prodid, string med, string bbyprod, string school, string grocery, string mssg)
         {
             try
             {
-                var evaluteuser = (await food
+                var evaluteuser = (await prod
                     .Child("Users")
                     .OnceAsync<Users>())
                     .FirstOrDefault
-                    (a => a.Object.Day == day);
+                    (a => a.Object.ProductID == prodid);
                 if (evaluteuser != null)
                 {
                     Users user = new Users
                     {
-                        Day = day,
-                        Week = week,
-                        Breakfast = bfast,
-                        Lunch = lunch,
-                        Dinner = dinner,
+                        ProductID = prodid,
+                        Medicine = med,
+                        BabyProduct = bbyprod,
+                        SchoolSupply = school,
+                        Grocery = grocery,
                         Message = mssg
                     };
-                    await food.Child("Users").Child(key).PatchAsync(user);
-                    food.Dispose();
+                    await prod.Child("Users").Child(key).PatchAsync(user);
+                    prod.Dispose();
                 }
-                food.Dispose();
+                prod.Dispose();
                 return false;
             }
             catch (Exception )
             {
-                food.Dispose();
+                prod.Dispose();
                 return false;
             }
         }
@@ -95,7 +95,7 @@ namespace PlanDiet.Model
         {
             try
             {
-                await food
+                await prod
                     .Child($"Users/{key}")
                     .DeleteAsync();
                 return "removed";
@@ -111,7 +111,7 @@ namespace PlanDiet.Model
 
         public ObservableCollection<Users> GetUserList()
         {
-            var userlist = food
+            var userlist = prod
                  .Child("Users")
                 .AsObservable<Users>()
                 .AsObservableCollection();
@@ -119,18 +119,18 @@ namespace PlanDiet.Model
 
         }
 
-        public async Task<string> GetUserKey(string day)
+        public async Task<string> GetUserKey(string prodid)
         {
             try
             {
-                var getuserkey = (await food.Child("Users").OnceAsync<Users>()).
-                    FirstOrDefault(a => a.Object.Day == day);
+                var getuserkey = (await prod.Child("Users").OnceAsync<Users>()).
+                    FirstOrDefault(a => a.Object.ProductID == prodid);
                 if (getuserkey == null) return null;
-                day1 = getuserkey.Object.Day;
-                week1 = getuserkey.Object.Week;
-                Breakfast1 = getuserkey.Object.Breakfast;
-                Lunch1 = getuserkey.Object.Lunch;
-                Dinner1 = getuserkey.Object.Dinner;
+                ProductID1 = getuserkey.Object.ProductID;
+                Medicine1 = getuserkey.Object.Medicine;
+                BabyProd1 = getuserkey.Object.BabyProduct;
+                SchoolSupply1 = getuserkey.Object.SchoolSupply;
+                Grocery1 = getuserkey.Object.Grocery;
 
                 return getuserkey?.Key;
             }

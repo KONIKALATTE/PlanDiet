@@ -16,23 +16,23 @@
                     <Grid Grid.Row="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
 
                         <Entry Grid.Row="0" Placeholder="Day" BackgroundColor="#8879B0" 
-                               x:Name="entryday" 
+                               x:Name="entryprodid" 
                                PlaceholderColor="White" TextColor="White"/>
 
                         <Entry Grid.Row="1" Placeholder="Week" BackgroundColor="#8879B0" 
-                               x:Name="entryweek" 
+                               x:Name="entrymed" 
                                PlaceholderColor="White" TextColor="White"/>
 
                         <Entry Grid.Row="2" Placeholder="Breakfast" BackgroundColor="#8879B0"
-                               x:Name="entrybfast"
+                               x:Name="entrybbyprod"
                                PlaceholderColor="White" TextColor="White"/>
 
                         <Entry Grid.Row="3" Placeholder="Lunch" BackgroundColor="#8879B0"
-                               x:Name="entrylunch"
+                               x:Name="entryschool"
                                PlaceholderColor="White" TextColor="White"/>
 
                         <Entry Grid.Row="4" Placeholder="Dinner" BackgroundColor="#8879B0"
-                               x:Name="entrydinner"
+                               x:Name="entrygrocery"
                                PlaceholderColor="White" TextColor="White"/>
 
                         <Entry Grid.Row="5" Placeholder="Message" BackgroundColor="#8879B0"

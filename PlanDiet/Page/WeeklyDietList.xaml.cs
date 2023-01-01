@@ -14,8 +14,8 @@ public partial class WeeklyDietList : ContentPage
 
     private async void ListUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        App.day1 = (e.CurrentSelection.FirstOrDefault() as Users)?.Day;
-        App.key = await userlist.GetUserKey(App.day1);
+        App.ProductID1 = (e.CurrentSelection.FirstOrDefault() as Users)?.ProductID;
+        App.key = await userlist.GetUserKey(App.ProductID1);
 
     }
 
