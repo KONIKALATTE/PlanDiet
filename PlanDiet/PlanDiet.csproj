@@ -54,6 +54,7 @@
 	  <None Remove="Resources\Images\food1.json" />
 	  <None Remove="Resources\Images\food2.json" />
 	  <None Remove="Resources\Images\strawberry.jpg" />
+	  <None Remove="Resources\Images\sugo.png" />
 	</ItemGroup>
 
 	<ItemGroup>

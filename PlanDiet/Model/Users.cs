@@ -131,6 +131,7 @@ namespace PlanDiet.Model
                 BabyProd1 = getuserkey.Object.BabyProduct;
                 SchoolSupply1 = getuserkey.Object.SchoolSupply;
                 Grocery1 = getuserkey.Object.Grocery;
+                Message1 = getuserkey.Object.Message;
 
                 return getuserkey?.Key;
             }

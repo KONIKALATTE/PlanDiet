@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.EditDietPage"
              Title=""
-             BackgroundColor="#377D71">
+             BackgroundColor="{StaticResource Primary}">
     
     <AbsoluteLayout>
         <Grid RowDefinitions="Auto, *" Margin="10" ColumnSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,1"

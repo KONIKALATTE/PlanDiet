@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.Page.startup"
              BackgroundColor="{StaticResource Primary}"
-             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              Title="">
    
     <ScrollView>
@@ -18,11 +17,7 @@
                 Background="{StaticResource Secondary}"
                 Padding="10,5"
                 HorizontalOptions="Center">
-
-                <skia:SKLottieView Source="food2.json"
-                                   RepeatCount="-1"
-                                   HeightRequest="300"
-                                   WidthRequest="300"/>
+                <Image Source="sugo.png" HeightRequest="200" WidthRequest="200"/>
             </Border>
 
             <VerticalStackLayout Spacing="5">
@@ -45,8 +40,8 @@
                         Background="{StaticResource Secondary}"
                         Padding="16,8"
                         HorizontalOptions="Center">
-                    <Label Text="Start to create your diet plan" 
-                       FontSize="28" 
+                    <Label Text="We make sure that you get what you need!" 
+                       FontSize="20" 
                        TextColor="{StaticResource White}" 
                        HorizontalTextAlignment="Center" 
                        FontFamily="Lato"/>

@@ -17,17 +17,17 @@
                 <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" Spacing="0" Margin="20">
                     <Image Source="logo" Margin="0,0,0,0" HeightRequest="80"/>
                     <StackLayout Margin="0,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                        <Border Stroke="{StaticResource Secondary}"
+                        <Border Stroke="{StaticResource White}"
                                 StrokeThickness="4"
                                 StrokeShape="RoundRectangle 40,0,0,40"
                                 Background="{StaticResource Tertiary}"
                                 Padding="16,8"
                                 HorizontalOptions="Center">
                             <Label Text="Login to your account." FontSize="30" HorizontalOptions="CenterAndExpand"
-                           TextColor="{StaticResource White}" FontAttributes="Bold" FontFamily="Lato" />
+                           TextColor="{StaticResource Secondary}" FontAttributes="Bold" FontFamily="Lato" />
                         </Border>
                         <Label Text="Start planning on your diet routine lets start on your food." HorizontalOptions="Center"
-                           FontSize="Small" TextColor="{StaticResource Secondary}" />
+                           FontSize="Small" TextColor="{StaticResource White}" />
                         
                     </StackLayout>
                 </StackLayout>
@@ -79,7 +79,7 @@
                         <StackLayout Grid.Row="4" Spacing="6" VerticalOptions="FillAndExpand" HeightRequest="40"
                                      HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                             <Button Text="Sign In" 
-                                    TextColor="{StaticResource White}" 
+                                    TextColor="{StaticResource Secondary}" 
                                     x:Name="btnsignin"
                                     Clicked="Btnsignin_Clicked"
                                     BackgroundColor="{StaticResource Tertiary}"
@@ -88,7 +88,7 @@
                                     HorizontalOptions="FillAndExpand" 
                                     TextTransform="None"/>
                             <Button Text="Cancel" 
-                                    TextColor="{StaticResource White}" 
+                                    TextColor="{StaticResource Secondary}" 
                                     BackgroundColor="{StaticResource Tertiary}" 
                                     x:Name="btncancel"
                                     CornerRadius="5" 

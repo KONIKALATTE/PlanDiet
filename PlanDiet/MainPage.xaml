@@ -2,26 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanDiet.MainPage"
-             BackgroundColor="{StaticResource Primary}">
+             BackgroundColor="{StaticResource Primary}"
+             >
 
     <ScrollView >
-        <Frame BackgroundColor="{StaticResource Secondary}" HeightRequest="1500" WidthRequest="600" HorizontalOptions="Center" >
+        <Frame BackgroundColor="{StaticResource Tertiary}" HeightRequest="1500" WidthRequest="600" HorizontalOptions="Center" >
             <VerticalStackLayout>
-                <Image Source="dietplanpic.png" HeightRequest="100" WidthRequest="110" VerticalOptions="Center"/>
                 <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
-                     <!--DAY-->
+                     <!--ProductID-->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="{StaticResource Tertiary}"
+                            Background="{StaticResource White}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="0" 
                             Grid.Column="0">
 
-                        <Label Text="Day"
+                        <Label Text="Product ID"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="{StaticResource White}" 
+                               TextColor="{StaticResource Secondary}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
@@ -29,7 +29,7 @@
                     <Border  Grid.Row="0" 
                              Grid.Column="1"
                              Stroke="{StaticResource White}">
-                        <Entry x:Name="txtday"
+                        <Entry x:Name="txtprodid"
                                Grid.ColumnSpan="2" 
                                PlaceholderColor="Coral"
                                VerticalOptions="CenterAndExpand"
@@ -38,19 +38,19 @@
                                FontFamily="Lato"/>
                     </Border>
                     
-                    <!-- WEEK -->
+                    <!-- medecine -->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="{StaticResource Tertiary}"
+                            Background="{StaticResource White}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="1" 
                             Grid.Column="0">
 
-                        <Label Text="Week"
+                        <Label Text="Medicine"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="{StaticResource White}" 
+                               TextColor="{StaticResource Secondary}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
@@ -58,7 +58,7 @@
                     <Border  Grid.Row="1" 
                              Grid.Column="1"
                              Stroke="{StaticResource White}">
-                        <Entry x:Name="txtweek"
+                        <Entry x:Name="txtmed"
                                Grid.ColumnSpan="2" 
                                PlaceholderColor="Coral"
                                VerticalOptions="CenterAndExpand"
@@ -69,19 +69,19 @@
 
 
 
-                    <!--BREAKFAST-->
+                    <!--baby prod-->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="{StaticResource Tertiary}"
+                            Background="{StaticResource White}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="2" 
                             Grid.Column="0">
 
-                        <Label Text="Breakfast"
+                        <Label Text="Baby Products"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="{StaticResource White}" 
+                               TextColor="{StaticResource Secondary}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
@@ -89,7 +89,7 @@
                     <Border Grid.Row="2" 
                             Grid.Column="1"
                             Stroke="{StaticResource White}">
-                        <Entry x:Name="txtbfast"
+                        <Entry x:Name="txtbbyprod"
                                Grid.ColumnSpan="2" 
                                PlaceholderColor="LightCoral"
                                VerticalOptions="CenterAndExpand"  
@@ -100,26 +100,26 @@
 
 
 
-                    <!--LUNCH-->
+                    <!--school supplies-->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="{StaticResource Tertiary}"
+                            Background="{StaticResource White}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="3" 
                             Grid.Column="0">
 
-                        <Label Text="Lunch"
+                        <Label Text="School Supplies"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="{StaticResource White}" 
+                               TextColor="{StaticResource Secondary}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
                     <Border Grid.Row="3" 
                             Grid.Column="1"
                             Stroke="{StaticResource White}">
-                        <Entry x:Name="txtlunch"
+                        <Entry x:Name="txtschool"
                                Grid.ColumnSpan="2"
                                PlaceholderColor="Coral"
                                VerticalOptions="CenterAndExpand" 
@@ -130,25 +130,25 @@
 
 
 
-                    <!--DINNER-->
+                    <!--Groceries-->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="{StaticResource Tertiary}"
+                            Background="{StaticResource White}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="4" 
                             Grid.Column="0">
 
-                        <Label Text="Dinner"
+                        <Label Text="Groceries"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="{StaticResource White}"
+                               TextColor="{StaticResource Secondary}"
                                FontFamily="Lato"/>  
                     </Border>
                     <Border Grid.Row="4" 
                             Grid.Column="1"
                             Stroke="{StaticResource White}">
-                        <Entry x:Name="txtdinner"
+                        <Entry x:Name="txtgrocery"
                                Grid.ColumnSpan="2"
                                PlaceholderColor="LightCoral"
                                VerticalOptions="CenterAndExpand"  
@@ -162,17 +162,17 @@
                     <!--WHAT'S ON YOUR MIND-->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="{StaticResource Tertiary}"
+                            Background="{StaticResource White}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="5" 
                             Grid.Column="0">
 
                         <Label Text="Message"
-                               x:Name="txtmssge"
+                               x:Name="txtmssg"
                                FontAttributes="Bold" 
                                FontSize="15" 
-                               TextColor="{StaticResource White}" 
+                               TextColor="{StaticResource Secondary}" 
                                HorizontalTextAlignment="Center" 
                                FontFamily="Lato"/>
                     </Border>
@@ -191,14 +191,10 @@
 
 
 
-
-
-                   
-
                 </Grid>
-                <Border Stroke="maroon"
+                <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
-                            Background="#FFE5EC"
+                            Background="{StaticResource Secondary}"
                             Padding="16,8"
                             HorizontalOptions="Center"
                             Grid.Row="0" 
@@ -211,26 +207,27 @@
                     x:Name="btnDone"
                     Text="Done"
                     TextColor="White"
+                        
                     HorizontalOptions="Center"
-                    BackgroundColor="DarkOliveGreen"
+                    BackgroundColor="{StaticResource White}"
                     Clicked="btndone_Clicked"/>
 
                 <Button Grid.Row="6" 
                     Grid.Column="1"
                     Text="View Diet Lists"
-                    TextColor="#FFE5EC" 
+                    TextColor="White" 
                     HorizontalOptions="Center" 
                     x:Name="btndietlist"
-                    BackgroundColor="OliveDrab" 
+                    BackgroundColor="{StaticResource White}" 
                     Clicked="btndietlist_Clicked" />
 
                 <Button Grid.Row="6" 
                     Grid.Column="0"
-                    Text="Cancel"
-                    TextColor="#FFE5EC" 
+                    Text="Logout"
+                    TextColor="Pink" 
                     HorizontalOptions="Center" 
                     x:Name="btncancel"
-                    BackgroundColor="Maroon" 
+                    BackgroundColor="{StaticResource White}" 
                     Clicked="btncancel_Clicked" />
                 </Grid>
                 </Border>
