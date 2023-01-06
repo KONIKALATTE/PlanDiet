@@ -12,7 +12,7 @@
             VerticalOptions="Center">
         <VerticalStackLayout Spacing="5">
             <Label Text="WELCOME" FontAttributes="Bold" FontSize="28" TextColor="{StaticResource White}" HorizontalTextAlignment="Center" />
-            <Label Text="Login to your account" FontSize="28" TextColor="{StaticResource White}" HorizontalTextAlignment="Center" />
+            <Label Text="CREATE NEW ACCOUNT" FontSize="28" TextColor="{StaticResource White}" HorizontalTextAlignment="Center" />
         </VerticalStackLayout>
         <Border BackgroundColor="{StaticResource White}">
         <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">

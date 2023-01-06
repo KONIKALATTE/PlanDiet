@@ -21,11 +21,11 @@
 
 
     <Grid RowDefinitions="Auto,Auto,Auto,*">
-        <Frame HeightRequest="200" CornerRadius="5" BackgroundColor="LightCoral"
+        <Frame HeightRequest="200" CornerRadius="5" BackgroundColor="{StaticResource Secondary}"
                Margin="0,0,0,0"/>
 
         <Label Grid.Row="0" 
-               Text="Diet Plan Lists"
+               Text="Check your stuffs"
                Margin="40" 
                FontSize="Large"
                FontAttributes="Bold"
@@ -43,12 +43,12 @@
 
         <SearchBar Grid.Row="1" 
                    Margin="10" 
-                   Placeholder="Find School" 
+                   Placeholder="search" 
                    BackgroundColor="White" 
-                   PlaceholderColor="Coral"/>
+                   PlaceholderColor="{StaticResource Secondary}"/>
 
         <Label Grid.Row="2" 
-               BackgroundColor="LightCoral" 
+               BackgroundColor="{StaticResource Secondary}" 
                x:Name="loader" TextColor="Gray"
                HorizontalOptions="CenterAndExpand"/>
 
@@ -88,23 +88,23 @@
             </SwipeItemView>
             </SwipeItems>-->
                         <!--</SwipeView.LeftItems>-->
-                        <Frame HeightRequest="200" 
+                        <Frame HeightRequest="250" 
                                WidthRequest="1000" 
                                HorizontalOptions="Center"
-                               BackgroundColor="Maroon">
+                               BackgroundColor="{StaticResource Tertiary}">
                             <Border WidthRequest="1000"
-                                Stroke="lightcoral"
+                                Stroke="{StaticResource Secondary}"
                                 StrokeThickness="4" 
                                 HeightRequest="600" 
                                 Padding="0" Margin="2"
-                                BackgroundColor="LightCoral">
+                                BackgroundColor="{StaticResource Secondary}">
 
                                 <!--Must add expander so the client can view if the renter has an advance payment-->
 
                             <Grid ColumnDefinitions="Auto, *">
                                 <Line Grid.Column="0" 
                         WidthRequest="5" 
-                        BackgroundColor="LightCoral"/>
+                        BackgroundColor="{StaticResource Secondary}"/>
 
                                 <StackLayout Grid.Column="1" Margin="0" 
                                Orientation="Horizontal" 
@@ -116,72 +116,84 @@
                                         
                                         
                                             <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Day:"                          
-                                                 TextColor="White"                          
+                                                 Text="ProductID:"                          
+                                                 TextColor="{StaticResource White}"                        
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
                                                  HorizontalOptions="Start" 
                                                  Grid.Row="0" 
                                                  Grid.Column="0" />
 
-                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Day}"
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding ProductID}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource White}"  />
 
                                             <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Week:"                          
-                                                 TextColor="White"                          
+                                                 Text="Medicine:"                          
+                                                 TextColor="{StaticResource White}"                           
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
                                                  HorizontalOptions="Start" 
                                                  Grid.Row="1" 
                                                  Grid.Column="0" />
 
-                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Week}"
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Medicine}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource White}"  />
 
                                         <Label VerticalOptions="CenterAndExpand" 
-                                                 Text="Breakfast:"                          
-                                                 TextColor="White"                          
+                                                 Text="Baby Product:"                          
+                                                 TextColor="{StaticResource White}"                           
                                                  FontSize="Medium" 
                                                  LineBreakMode="TailTruncation"                         
                                                  HorizontalOptions="Start" 
                                                  Grid.Row="2" 
                                                  Grid.Column="0" />
 
-                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Breakfast}"
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding BabyProduct}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource White}"  />
 
-                                        <Label VerticalOptions="CenterAndExpand" Text="Lunch:"
-                                                   TextColor="White"
+                                        <Label VerticalOptions="CenterAndExpand" Text="School Supply:"
+                                                   TextColor="{StaticResource White}" 
                                                    FontSize="Medium"
                                                    HorizontalOptions="Start" Grid.Row="3" Grid.Column="0" />
 
-                                        <Label Grid.Row="3" Grid.Column="4" Text="{Binding Lunch}"
+                                        <Label Grid.Row="3" Grid.Column="4" Text="{Binding SchoolSupply}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource White}"  />
 
-                                        <Label VerticalOptions="CenterAndExpand" Text="Dinner:"
-                                                   TextColor="White"
+                                        <Label VerticalOptions="CenterAndExpand" Text="Grocery:"
+                                                   TextColor="{StaticResource White}" 
                                                    FontSize="Medium"
                                                    HorizontalOptions="Start" Grid.Row="4" Grid.Column="0" />
 
                                         
-                                        <Label Grid.Row="4" Grid.Column="4" Text="{Binding Dinner}"
+                                        <Label Grid.Row="4" Grid.Column="4" Text="{Binding Grocery}"
                                                    FontSize="Medium"
                                                    FontAttributes="Bold" 
                                                    LineBreakMode="TailTruncation"
-                                                   TextColor="White" />
+                                                   TextColor="{StaticResource White}"  />
+
+                                            <Label VerticalOptions="CenterAndExpand" Text="Message:"
+                                                   TextColor="{StaticResource White}" 
+                                                   FontSize="Medium"
+                                                   HorizontalOptions="Start" Grid.Row="5" Grid.Column="0" />
+
+
+                                            <Label Grid.Row="5" Grid.Column="4" Text="{Binding Message}"
+                                                   FontSize="Medium"
+                                                   FontAttributes="Bold" 
+                                                   LineBreakMode="TailTruncation"
+                                                   TextColor="{StaticResource White}"  />
 
 
 
-                                    </Grid>
+                                        </Grid>
                                 </StackLayout>
                             </Grid>
                         </Border>

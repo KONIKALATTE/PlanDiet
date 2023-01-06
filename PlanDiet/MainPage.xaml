@@ -159,7 +159,7 @@
 
 
 
-                    <!--WHAT'S ON YOUR MIND-->
+                    <!--Message-->
                     <Border Stroke="{StaticResource White}"
                             StrokeThickness="4"
                             Background="{StaticResource White}"
@@ -169,7 +169,6 @@
                             Grid.Column="0">
 
                         <Label Text="Message"
-                               x:Name="txtmssg"
                                FontAttributes="Bold" 
                                FontSize="15" 
                                TextColor="{StaticResource Secondary}" 
@@ -181,7 +180,7 @@
                             Stroke="{StaticResource White}">
                         <Entry Grid.Row="5" 
                                Grid.Column="0" 
-                               x:Name="message"
+                               x:Name="txtmssg"
                                PlaceholderColor="LightCoral"
                                VerticalOptions="CenterAndExpand"  
                                HorizontalTextAlignment="Center"

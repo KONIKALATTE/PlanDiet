@@ -8,41 +8,41 @@
     <AbsoluteLayout>
         <Grid RowDefinitions="Auto, *" Margin="10" ColumnSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,1"
               AbsoluteLayout.LayoutFlags="All">
-            <Label Grid.Row="0" Text="Modify your plan" Margin="10,0"
+            <Label Grid.Row="0" Text="Change your items" Margin="10,0"
                 VerticalOptions="Center" FontSize="30" FontAttributes="Bold"
-                HorizontalOptions="Start" TextColor="#FBC5C5"/>
-            <Frame CornerRadius="10" Grid.Row="1" VerticalOptions="CenterAndExpand" BackgroundColor="#FBC5C5">
+                HorizontalOptions="Start" TextColor="{StaticResource White}" />
+            <Frame CornerRadius="10" Grid.Row="1" VerticalOptions="CenterAndExpand" BackgroundColor="{StaticResource Secondary}" >
                 <Grid Margin="10" RowDefinitions="Auto,Auto">
                     <Grid Grid.Row="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
 
-                        <Entry Grid.Row="0" Placeholder="Day" BackgroundColor="#8879B0" 
+                        <Entry Grid.Row="0" Placeholder="Product ID" BackgroundColor="{StaticResource Tertiary}" 
                                x:Name="entryprodid" 
                                PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="1" Placeholder="Week" BackgroundColor="#8879B0" 
+                        <Entry Grid.Row="1" Placeholder="Medicine" BackgroundColor="{StaticResource Tertiary}" 
                                x:Name="entrymed" 
                                PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="2" Placeholder="Breakfast" BackgroundColor="#8879B0"
+                        <Entry Grid.Row="2" Placeholder="Baby Product" BackgroundColor="{StaticResource Tertiary}" 
                                x:Name="entrybbyprod"
                                PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="3" Placeholder="Lunch" BackgroundColor="#8879B0"
+                        <Entry Grid.Row="3" Placeholder="School Supply" BackgroundColor="{StaticResource Tertiary}" 
                                x:Name="entryschool"
                                PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="4" Placeholder="Dinner" BackgroundColor="#8879B0"
+                        <Entry Grid.Row="4" Placeholder="Grocery" BackgroundColor="{StaticResource Tertiary}" 
                                x:Name="entrygrocery"
                                PlaceholderColor="White" TextColor="White"/>
 
-                        <Entry Grid.Row="5" Placeholder="Message" BackgroundColor="#8879B0"
+                        <Entry Grid.Row="5" Placeholder="Message" BackgroundColor="{StaticResource Tertiary}" 
                                x:Name="entrymssg"
                                PlaceholderColor="White" TextColor="White"/>
 
 
 
                     </Grid>
-                    <Button Grid.Row="1" BackgroundColor="#FBA1A1"
+                    <Button Grid.Row="1" BackgroundColor="{StaticResource White}" 
                             Text="Modify" TextTransform="None" TextColor="{StaticResource TextColorBlack}"
                             x:Name="btnmodify" CornerRadius="8"
                                 Clicked="btnmodify_Clicked"/>
